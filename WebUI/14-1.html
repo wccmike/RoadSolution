@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh"
+  xml:lang="zh">
+
+<head>
+  <meta http-equiv="Content-Type"
+    content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible"
+    content="IE=edge" />
+  <meta name="viewport"
+    content="initial-scale=1.0, user-scalable=no, width=device-width"
+  />
+  <meta http-equiv="Pragma"
+    content="no-cache" />
+  <meta http-equiv="Cache-Control"
+    content="no-cache" />
+  <meta http-equiv="Expires"
+    content="-1" />
+  <title>无标题文档</title>
+  <link href="assets/css/style.css"
+    rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery.js"></script>
+  <link rel="stylesheet"
+    href="assets/css/zTreeStyle/zTreeStyle.css"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript"
+    src="assets/js/jquery.ztree.core-3.5.js"></script>
+  <script src="assets/js/myfunction.js"
+    charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function() {
+      //声明外部jsFUNCTION
+      // var ajaxUrlInputJsonReturnJsonF =
+      //   ajaxUrlInputJsonReturnJson;
+      // var renderTbodyF = renderTbody;
+      // var parseFormInputF = parseFormInput;
+      // var serializeObjectF = $.serializeObject;
+      // var dataTable = $(".tablelist");
+      // for (var i = 0; i < ghkqs.length; i++) {
+      //   var ghkq = ghkqs[i];
+      //   var htmlRow = "<tr>";
+      //   htmlRow += "<td><input  type='checkbox' /></td>";
+      //   htmlRow += "<td>" + ghkq.id + "</td>";
+      //   htmlRow += "<td>" + ghkq.xq + "</td>";
+      //   htmlRow += "<td>" + ghkq.ghz + "</td>";
+      //   htmlRow += "<td>" + ghkq.weilan + "</td>";
+      //   htmlRow += "<td>" + ghkq.ghpq + "</td>";
+      //   htmlRow += "<td>" + ghkq.name + "</td>";
+      //   htmlRow += "<td>" + ghkq.sj + "</td>";
+      //   htmlRow += "<td>" + ghkq.cqts + "</td>";
+      //   htmlRow += "<td>" + ghkq.sbrz + "</td>";
+      //   htmlRow += "</tr>";
+      //   dataTable.find("tbody").append(htmlRow);
+      // }
+      // function ajaxUrlInputJsonReturnJson(argurl,arginputdata){
+      //   var output;
+      //   $.ajax({
+      //     "url":argurl,
+      //     "data":arginputdata,
+      //     "type":"POST",
+      //     "success": function(d){
+      //       output = d;
+      //     } ,
+      //     "error": function() {
+      //       alert('busy nice try');
+      //     },
+      //     "dataType": "json"
+      //   });
+      //   return output;
+      // }
+      $("#btnquery").click(function() {
+        //清空table data
+        $("table.tablelist").children("tbody").empty();
+        // var inputdatasmall = $("#inform").serializeObject();
+        // inputdatasmall = JSON.stringify(
+        //   inputdatasmall);
+        // inputdatasmall = inputdatasmall.replace(
+        //   /"([^"]*)"/g, "'$1'");
+        var data = parseFormInput("inform");
+        var url = "ActionAboutUser.aspx/QueryPerson";
+        //存列名到一个数组
+        var arr = new Array("WorkID", "Name",
+          "TypeName", "Road", "Department");
+        var lastDataHTML = "emp-1.html";
+        var lastDataParaName = "UserID";
+        ajaxUrlInputJsonReturnJson(url, data,
+          function(da) {
+            console.log(da);
+            var httable = renderTbody(da, arr, "a",
+              lastDataHTML, lastDataParaName);
+            $("table.tablelist").children("tbody")
+              .append(httable);
+          });
+      });
+    });
+    //把JSON渲染至DOM中
+    // function render(data) {
+    //   //转为 JS OBJECT
+    //   var obj = JSON.parse(data);
+    //   //渲染
+    //   var intext = "";
+    //   for (var i = 0; i < obj.total; i++) {
+    //     intext += "<tr align=\"center\">";
+    //     intext += "<td>" + obj.rows[i].WorkID + "</td>";
+    //     intext += "<td>" + obj.rows[i].Name + "</td>";
+    //     intext += "<td>" + obj.rows[i].TypeName + "</td>";
+    //     intext += "<td>" + obj.rows[i].Road + "</td>";
+    //     intext += "<td>" + obj.rows[i].Department + "</td>";
+    //     intext += "<td> <a href=\"emp-1.html?UserID=" + obj.rows[
+    //       i].UserID + "\">进入</a> </td>";
+    //     intext += "</tr>";
+    //   }
+    //   $("table.tablelist").children("tbody").append(intext);
+    // }
+  </script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li> <a href="#">首页</a> </li>
+      <li> <a href="#">人员管理</a> </li>
+      <li> <a href="#">查询</a> </li>
+    </ul>
+  </div>
+  <div class="mainindex">
+    <div></div>
+    <div>
+      <form action="#"
+        id="inform">
+        <ul class="seachform">
+          <li> <label>姓名</label><input name="Name"
+              type="text"
+              value=""
+              class="scinput" /></li>
+          <li> <label>道路</label><input name="Road"
+              type="text"
+              value=""
+              class="scinput" /></li>
+          <li> <label>人员类型</label> <select name="TypeID">
+              <option value="-1">空</option>
+              <option value="1">指挥中心</option>
+              <option value="2">路长</option>
+              <option value="3">信息采集员</option>
+            </select> </li>
+          <li> <label>&nbsp;</label><input id="btnquery"
+              type="button"
+              class="scbtn"
+              value="查询" /></li>
+        </ul>
+      </form>
+    </div>
+    <table class="tablelist">
+      <thead>
+        <tr>
+          <th>工号</th>
+          <th>姓名</th>
+          <th>人员类型</th>
+          <th>路名</th>
+          <th>部门</th>
+          <th>详情</th>
+        </tr>
+      </thead>
+      <tbody> </tbody>
+    </table>
+  </div>
+  <div class="pagin">
+    <div class="message">共<i class="blue">3</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+    <ul class="paginList">
+      <li class="paginItem current"> <a href="javascript:;">
+            <span class="pagepre">上页</span></a> </li>
+      <li class="paginItem">
+      <a href="javascript:;">1</a> </li>
+      <li class="paginItem current ">
+      <a href="javascript:;">
+            <span class="pagenxt">下页</span></a> </li>
+    </ul>
+  </div>
+  <div class="tip">
+    <div class="tiptop"> <span>提示信息</span> <a></a> </div>
+    <div class="tipinfo"> <span><img src="assets/images/ticon.png"/></span>
+      <div class="tipright">
+        <p>是否确认对信息的修改 ？</p> <cite>如果是请点击确定按钮 ，否则请点取消。</cite> </div>
+    </div>
+    <div class="tipbtn"> <input name=""
+        type="button"
+        class="sure"
+        value="确定" />&nbsp; <input name=""
+        type="button"
+        class="cancel"
+        value="取消" /> </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    $('.tablelist tbody tr:odd').addClass('odd');
+  </script>
+</body>
+
+</html>
+<!-- <script>
+  function ajaxUrlInputJsonReturnJson(argurl, arginputdata) {
+    var output = "";
+    $.ajax({
+      "url": argurl,
+      "data": arginputdata,
+      "contentType": "application/json; charset=utf-8",
+      "type": "POST",
+      "success": function(data) {
+        alert(data.d);
+        output = data.d;
+      },
+      "error": function() {
+        alert('busy nice try');
+      },
+      "dataType": "json"
+    });
+    // return output;
+  }
+</script> -->

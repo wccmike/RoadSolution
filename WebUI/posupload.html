@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh" xml:lang="zh">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"
+  />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <title>adsf</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css"
+  />
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css"
+  />
+  <script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+  <script src="http://webapi.amap.com/maps?v=1.4.6&key=e43f35e72eb6b92300af1e98b63397a0"
+    type="text/javascript">
+  </script>
+  <script src="assets/js/posapi.js" charset="utf-8"></script>
+  <script>
+    $(function() {
+      $("#btnGet").click(function() {
+        dataIn('posdataI');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">上传资料</a></li>
+      <li><a href="#">上传当前坐标</a></li>
+    </ul>
+  </div>
+  <div class="mainindex">
+    <div class="posdata"> <span id="posdataI"></span><span class="longblank"></span> <span>lat为纬度</span>      </div>
+    <div>
+      <ul class="seachform taul">
+        <li><label>&nbsp;</label><input id="btnGet" name="" type="button" class="scbtn"
+            value="获取坐标" /></li>
+        <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="确定"
+          /></li>
+      </ul>
+      <div class="xline" align="center"></div>
+    </div>
+  </div>
+</body>
+
+</html>

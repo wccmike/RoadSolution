@@ -1,0 +1,157 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+   
+	$(function(){  
+		var dataTable = $(".tablelist");
+		for(var i=0; i<rzpfs.length; i++){
+			var rzpf = rzpfs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+            htmlRow += "<td>" + rzpf.id + "</td>";
+			htmlRow += "<td>" + rzpf.dq + "</td>";	
+            htmlRow += "<td>" + rzpf.js + "</td>";
+			htmlRow += "<td>" + rzpf.xq + "</td>";
+            htmlRow += "<td>" + rzpf.ghz + "</td>";
+             htmlRow += "<td>" + rzpf.weilan + "</td>";
+			htmlRow += "<td>" + rzpf.ghpq + "</td>";
+				htmlRow += "<td>" + rzpf.name + "</td>";	
+			htmlRow += "<td>" + rzpf.sj + "</td>";
+            htmlRow += "<td>" + rzpf.wcl + "</td>"; 
+            htmlRow += "<td>" + rzpf.cql+ "</td>";
+         
+	
+	
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">人员管理</a></li>
+    <li><a href="#">录入</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    <div >
+    <ul class="seachform">
+	
+	<li><label>姓名</label><input name="" type="text" value="" class="scinput" /></li>
+    
+	<li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+	<li><label>&nbsp;</label><a href="14-1-1.html"><input name="" type="button" class="scbtn" value="EXC导出"/></a></li>
+	<li><label>&nbsp;</label><a href="14-1-2.html"><input name="" type="button" class="scbtn" value="EXC导入"/></a></li>
+    </ul>
+
+    </div>
+    <div >
+    
+	
+	
+    </ul>
+    </div>
+    
+    
+    
+    
+   
+   
+     
+     <table class="tablelist" >
+    	<thead>
+    	<tr>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编号</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年龄</th>	 
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路名</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;部门</th>
+        </tr>
+		<tr align="center">
+			<td>1</td>
+			<td>张三</td>
+			<td>男</td>
+			<td>23</td>
+			<td><img src="assets/images/1.png"></td>
+			<td>解放路</td>
+			<td>XX所</td>
+		</tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+	
+    </div>
+   <div class="pagin">
+    	<div class="message">共<i class="blue">10</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem current"><a href="javascript:;"><span class="pagepre">上页</span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+      
+        <li class="paginItem current "><a href="javascript:;"><span class="pagenxt">下页</span></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+   
+</body>
+
+</html>

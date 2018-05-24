@@ -1,0 +1,186 @@
+body {
+	padding-left:2px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+html {
+	background-color: #F9F9F9;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+body {
+	background-color: #F9F9F9;
+	font-family: Verdana, Arial,Vrinda,Tahoma;
+	line-height: 175%;
+	font-size:14px;
+	color:#666;
+}
+
+
+
+#man_zone {
+	height: 100%;
+	width: 99%;
+	border: 1px solid #B4C9C6;
+	margin: 6px 0 0 0;
+	background-color:#FFFFFF;
+	padding: 5px 0 5px 0;
+	overflow: auto;
+}
+#man_zone table{
+    background-color:#DBE6E3;
+}
+#man_zone table tr{
+    background-color:#fff;
+}
+.left_title_1 {
+	background-color: #F3F8F7;
+	color:#73938E;
+	font-weight:bold;
+	line-height:20px;
+	text-align:right
+}
+.left_title_2 {
+	background-color: #fff;
+	color:#73938E;
+	font-weight:bold;
+	line-height:20px;
+	text-align:right;
+}
+/*文本框样式*/
+
+.InputField
+{
+	border-bottom: #A4C2D5 1px solid;
+	border-top: #A4C2D5 1px solid;
+	border-left: #A4C2D5 1px solid;
+	border-right: #A4C2D5 1px solid;
+	font-family: 宋体,Tahoma;
+	font-size: 11pt;
+	/*vertical-align:middle;*/
+}
+
+/*按钮样式*/
+Input.ImgButton
+{
+	border-right: #0A246A 1px solid;
+	border-top: #0A246A 1px solid;
+	border-bottom: #0A246A 1px solid;
+	border-left: #0A246A 1px solid;
+	background-color: #d6e6f0;
+	color: #000000;
+	font-size: 10pt;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 20px;
+}
+
+/* GridView--整体--样式*/
+.GVBody
+{
+	width:95%;
+	height:auto;
+	/*background-color: #166CBF;*/
+	border:solid 1px #B5D6E6;
+	cellspacing:10px;
+}
+.GVBody td,th
+{
+	border-collapse:collapse;
+	/*border:solid 1px #CEDBE7;*/
+	border:solid 1px #B5D6E6;
+}
+/* GridView--头部--样式*/
+.GVHeader
+{
+	color: #000;
+	font-size: 9pt;
+	font-weight:bold;
+	height:22px;
+	text-align:center;
+	background-image: url('../images/bg.gif');
+}
+/* GridView--正常行--样式*/
+.GVRow
+{
+	/*background-color:#D5E0EB;*/
+	background-color:#FFF;
+	color:Black;
+	height:20px;
+	text-align:center;
+}
+/* GridView--交替行--样式*/
+.GVAlertRow
+{
+	background-color: #FFF;
+	color: Black;
+	height:20px;
+	text-align:center;
+}
+/* GridView--空行--样式*/
+.GVEmptyRow
+{
+	background-color: #E5E5E5;
+}
+/* GridView--空行模版--样式*/
+.GVEmptyTemplate
+{
+	background-color:#FFFF99;
+	font-weight:bold;
+	color:Maroon;
+	height:30px;
+	width:100%;
+	border-width:0px;
+	text-align:center;
+}
+/* GridView--分页--样式*/
+.GVPageRow
+{
+	border-width:0px;
+	width:auto;
+	height:auto;
+}
+.GVPageRow td
+{
+	border-width:0px;
+	width:auto;
+	height:auto;
+	text-align:center;
+}
+.GVPageRow td a
+{
+	font-weight:bold;
+}
+/* GridView样式-----结束*/
+
+.ContentTable
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	width:100%;
+	height:24px;
+	background-color:#B5E6D6;
+	border-collapse:collapse;
+}
+/*表格的单元格属性*/
+.ContentTable td
+{
+	background-color:#ffffff;
+	vertical-align: top;
+	padding: 3 5 3 0;
+}
+
+.ContentTable td.alt
+{
+	/*background-color: #CDEAF9;*/
+	background-color: #33A9D0;
+}
+
+/*Table样式布局结束*/

@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E58E6331-27B0-47B7-85AA-9F8546E4BD77}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebUI</RootNamespace>
+    <AssemblyName>WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="10-4.html" />
+    <Content Include="12-1-1.html" />
+    <Content Include="12-1-2.html" />
+    <Content Include="12-1.html" />
+    <Content Include="12-2-1.html" />
+    <Content Include="12-2-2.html" />
+    <Content Include="12-2-3.html" />
+    <Content Include="12-2-4.html" />
+    <Content Include="12-2.html" />
+    <Content Include="12-3-1.html" />
+    <Content Include="12-3-2.html" />
+    <Content Include="12-3-3.html" />
+    <Content Include="12-3-4.html" />
+    <Content Include="12-3.html" />
+    <Content Include="12-4.html" />
+    <Content Include="13-01-1.html" />
+    <Content Include="13-01-7.html" />
+    <Content Include="13-01.html" />
+    <Content Include="13-02-1.html" />
+    <Content Include="13-02-2.html" />
+    <Content Include="13-02.html" />
+    <Content Include="13-03-1.html" />
+    <Content Include="13-03-2.html" />
+    <Content Include="13-03.html" />
+    <Content Include="13-04-1.html" />
+    <Content Include="13-04-2.html" />
+    <Content Include="13-04.html" />
+    <Content Include="13-1-1.html" />
+    <Content Include="13-1-2.html" />
+    <Content Include="13-1-3.html" />
+    <Content Include="13-1.html" />
+    <Content Include="13-2-1.html" />
+    <Content Include="13-2-2.html" />
+    <Content Include="13-2-3.html" />
+    <Content Include="13-2.html" />
+    <Content Include="13-3.html" />
+    <Content Include="13-4.html" />
+    <Content Include="13-5-1.html" />
+    <Content Include="13-5-2.html" />
+    <Content Include="13-5.html" />
+    <Content Include="14-1-1.html" />
+    <Content Include="14-1-2.html" />
+    <Content Include="14-1.html" />
+    <Content Include="14-2-1.html" />
+    <Content Include="14-2-2.html" />
+    <Content Include="14-2.html" />
+    <Content Include="14-3-1.html" />
+    <Content Include="14-3-2.html" />
+    <Content Include="14-3.html" />
+    <Content Include="14-4-1.html" />
+    <Content Include="14-4-2.html" />
+    <Content Include="14-4.html" />
+    <Content Include="14-5.html" />
+    <Content Include="15-1-1.html" />
+    <Content Include="15-1-2.html" />
+    <Content Include="15-1-3.html" />
+    <Content Include="15-1.html" />
+    <Content Include="15-2-1.html" />
+    <Content Include="15-2-2.html" />
+    <Content Include="15-2-3.html" />
+    <Content Include="15-2.html" />
+    <Content Include="15-3-01.html" />
+    <Content Include="15-3-02.html" />
+    <Content Include="15-3-1.html" />
+    <Content Include="15-3-2.html" />
+    <Content Include="15-3-3.html" />
+    <Content Include="15-3.html" />
+    <Content Include="15-4-1.html" />
+    <Content Include="15-4-2.html" />
+    <Content Include="15-4-3.html" />
+    <Content Include="15-4.html" />
+    <Content Include="15-5-1.html" />
+    <Content Include="15-5-2.html" />
+    <Content Include="15-5-3.html" />
+    <Content Include="15-5.html" />
+    <Content Include="16-1-1.html" />
+    <Content Include="16-1-2.html" />
+    <Content Include="16-1-3.html" />
+    <Content Include="16-1.html" />
+    <Content Include="16-2-1.html" />
+    <Content Include="16-2-2.html" />
+    <Content Include="16-2-3.html" />
+    <Content Include="18-1-1.html" />
+    <Content Include="18-1-2.html" />
+    <Content Include="18-1-3.html" />
+    <Content Include="18-1-4.html" />
+    <Content Include="18-1-5.html" />
+    <Content Include="18-1.html" />
+    <Content Include="18-2-1.html" />
+    <Content Include="18-2-2.html" />
+    <Content Include="18-2-3.html" />
+    <Content Include="18-2.html" />
+    <Content Include="19-1.html" />
+    <Content Include="19-3.html" />
+    <Content Include="19-4-1.html" />
+    <Content Include="19-4.html" />
+    <Content Include="19-5-1.html" />
+    <Content Include="19-5-2.html" />
+    <Content Include="19-5-3.html" />
+    <Content Include="19-5.html" />
+    <Content Include="19-6-1.html" />
+    <Content Include="19-6.html" />
+    <Content Include="19-7-1.html" />
+    <Content Include="19-7.html" />
+    <Content Include="20-2-1.html" />
+    <Content Include="20-2.html" />
+    <Content Include="20-3.html" />
+    <Content Include="7-1.html" />
+    <Content Include="7-2-2-2.html" />
+    <Content Include="7-2-2.html" />
+    <Content Include="7-2-2add.html" />
+    <Content Include="7-2-2dao.html" />
+    <Content Include="7-2-2see.html" />
+    <Content Include="7-2-2set.html" />
+    <Content Include="7-2-3dao.html" />
+    <Content Include="7-2.html" />
+    <Content Include="7-22-2set.html" />
+    <Content Include="7-22add.html" />
+    <Content Include="7-22set.html" />
+    <Content Include="7-2add.html" />
+    <Content Include="7-2check.html" />
+    <Content Include="7-2set.html" />
+    <Content Include="7-3.html" />
+    <Content Include="7-3add.html" />
+    <Content Include="7-4-4-4.html" />
+    <Content Include="7-4-4.html" />
+    <Content Include="7-4.html" />
+    <Content Include="7-5.html" />
+    <Content Include="7-5add.html" />
+    <Content Include="8-1-1.html" />
+    <Content Include="8-1.html" />
+    <Content Include="8-1add.html" />
+    <Content Include="8-1check.html" />
+    <Content Include="8-2.html" />
+    <Content Include="8-2add.html" />
+    <Content Include="8-2check.html" />
+    <Content Include="8-3.html" />
+    <Content Include="8-3add.html" />
+    <Content Include="8-4.html" />
+    <Content Include="8-4add.html" />
+    <Content Include="8-5.html" />
+    <Content Include="8-6-1.html" />
+    <Content Include="8-6.html" />
+    <Content Include="ActionAboutAttendance.aspx" />
+    <Content Include="ActionAboutUser.asmx" />
+    <Content Include="ActionAboutUser.aspx" />
+    <Content Include="assets\editor\kindeditor.js" />
+    <Content Include="assets\editor\plugins\about.html" />
+    <Content Include="assets\editor\plugins\emoticons\etc_01.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_02.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_03.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_04.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_05.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_06.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_07.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_08.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_09.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_10.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_11.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_12.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_13.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_14.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_15.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_16.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_17.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_18.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_19.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_20.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_21.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_22.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_23.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_24.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_25.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_26.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_27.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_28.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_29.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_30.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_31.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_32.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_33.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_34.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_35.gif" />
+    <Content Include="assets\editor\plugins\emoticons\etc_36.gif" />
+    <Content Include="assets\editor\plugins\flash.html" />
+    <Content Include="assets\editor\plugins\image.html" />
+    <Content Include="assets\editor\plugins\link.html" />
+    <Content Include="assets\editor\plugins\media.html" />
+    <Content Include="assets\editor\plugins\plainpaste.html" />
+    <Content Include="assets\editor\plugins\remote_image.html" />
+    <Content Include="assets\editor\plugins\wordpaste.html" />
+    <Content Include="assets\editor\skins\default.css" />
+    <Content Include="assets\editor\skins\default.gif" />
+    <Content Include="assets\editor\skins\div.gif" />
+    <Content Include="assets\editor\skins\dl.gif" />
+    <Content Include="assets\editor\skins\editor.css" />
+    <Content Include="assets\editor\skins\ol.gif" />
+    <Content Include="assets\editor\skins\p.gif" />
+    <Content Include="assets\editor\skins\tinymce.css" />
+    <Content Include="assets\editor\skins\tinymce.gif" />
+    <Content Include="assets\editor\skins\ul.gif" />
+    <Content Include="assets\js\dept.js.bak" />
+    <Content Include="assets\js\map.js.bak" />
+    <Content Include="assets\js\map2.js.bak" />
+    <Content Include="assets\js\map3.js.bak" />
+    <Content Include="dept.html" />
+    <Content Include="deptAdd.html" />
+    <Content Include="deptDetail.html" />
+    <Content Include="deptUpdate.html" />
+    <Content Include="emp-1.html" />
+    <Content Include="emp.html" />
+    <Content Include="empAdd.html" />
+    <Content Include="empDetail.html" />
+    <Content Include="empUpdate.html" />
+    <Content Include="empw.html" />
+    <Content Include="error.html" />
+    <Content Include="geren1.html" />
+    <Content Include="gps.html" />
+    <Content Include="gpsdetail.html" />
+    <Content Include="hulin.html" />
+    <Content Include="hulinAdd.html" />
+    <Content Include="hulinDetail.html" />
+    <Content Include="hulinUpdate.html" />
+    <Content Include="index.html" />
+    <Content Include="login.html" />
+    <Content Include="message.html" />
+    <Content Include="monitor_disease.html" />
+    <Content Include="monitor_fire.html" />
+    <Content Include="monitor_investigation.html" />
+    <Content Include="msgpush.html" />
+    <Content Include="posupload.html" />
+    <Content Include="problemDeal.html" />
+    <Content Include="problemdetail.html" />
+    <Content Include="recheck.html" />
+    <Content Include="recheckupload.aspx" />
+    <Content Include="recheckupload.html" />
+    <Content Include="Register.html" />
+    <Content Include="signday.html" />
+    <Content Include="top.aspx" />
+    <Content Include="trace.html" />
+    <Content Include="tracedetail.html" />
+    <Content Include="weilan.html" />
+    <Content Include="weilanlook.html" />
+    <Content Include="weilanx.html" />
+    <Content Include="xucha.html" />
+    <Content Include="xunchaAdd.html" />
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\IISConfig.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\mainst.css" />
+    <Content Include="assets\css\map.css" />
+    <Content Include="assets\css\select.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="assets\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="assets\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="assets\css\zTreeStyle\img\loading.gif" />
+    <Content Include="assets\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="assets\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="assets\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="assets\images\001.jpg" />
+    <Content Include="assets\images\1.png" />
+    <Content Include="assets\images\100.png" />
+    <Content Include="assets\images\101.png" />
+    <Content Include="assets\images\102.png" />
+    <Content Include="assets\images\103.png" />
+    <Content Include="assets\images\111.png" />
+    <Content Include="assets\images\19-1.png" />
+    <Content Include="assets\images\19-3.jpg" />
+    <Content Include="assets\images\20-2.png" />
+    <Content Include="assets\images\404.png" />
+    <Content Include="assets\images\add.png" />
+    <Content Include="assets\images\bc1.jpg" />
+    <Content Include="assets\images\bc2.jpg" />
+    <Content Include="assets\images\bc_point.png" />
+    <Content Include="assets\images\btnbg.png" />
+    <Content Include="assets\images\btnbg1.png" />
+    <Content Include="assets\images\btnbg2.png" />
+    <Content Include="assets\images\buttonbg.png" />
+    <Content Include="assets\images\c01.png" />
+    <Content Include="assets\images\c02.png" />
+    <Content Include="assets\images\c03.png" />
+    <Content Include="assets\images\cbg.png" />
+    <Content Include="assets\images\clist.png" />
+    <Content Include="assets\images\close.png" />
+    <Content Include="assets\images\close1.png" />
+    <Content Include="assets\images\cloud.png" />
+    <Content Include="assets\images\d01.png" />
+    <Content Include="assets\images\d02.png" />
+    <Content Include="assets\images\d03.png" />
+    <Content Include="assets\images\d04.png" />
+    <Content Include="assets\images\d05.png" />
+    <Content Include="assets\images\d06.png" />
+    <Content Include="assets\images\d07.png" />
+    <Content Include="assets\images\dc_point.png" />
+    <Content Include="assets\images\df1.jpg" />
+    <Content Include="assets\images\df2.jpg" />
+    <Content Include="assets\images\df_point.png" />
+    <Content Include="assets\images\diskbg.png" />
+    <Content Include="assets\images\dp.png" />
+    <Content Include="assets\images\f01.png" />
+    <Content Include="assets\images\f02.png" />
+    <Content Include="assets\images\f03.png" />
+    <Content Include="assets\images\f04.png" />
+    <Content Include="assets\images\f05.png" />
+    <Content Include="assets\images\f06.png" />
+    <Content Include="assets\images\fire_point.png" />
+    <Content Include="assets\images\help.png" />
+    <Content Include="assets\images\hz1.jpg" />
+    <Content Include="assets\images\hz2.jpg" />
+    <Content Include="assets\images\hz3.jpg" />
+    <Content Include="assets\images\i01.png" />
+    <Content Include="assets\images\i02.png" />
+    <Content Include="assets\images\i03.png" />
+    <Content Include="assets\images\i04.png" />
+    <Content Include="assets\images\i05.png" />
+    <Content Include="assets\images\i06.png" />
+    <Content Include="assets\images\i07.png" />
+    <Content Include="assets\images\i08.png" />
+    <Content Include="assets\images\i09.png" />
+    <Content Include="assets\images\iadd.png" />
+    <Content Include="assets\images\ibtnbg.png" />
+    <Content Include="assets\images\ico01.png" />
+    <Content Include="assets\images\ico02.png" />
+    <Content Include="assets\images\ico03.png" />
+    <Content Include="assets\images\ico04.png" />
+    <Content Include="assets\images\ico05.png" />
+    <Content Include="assets\images\ico06.png" />
+    <Content Include="assets\images\icon01.png" />
+    <Content Include="assets\images\icon02.png" />
+    <Content Include="assets\images\icon03.png" />
+    <Content Include="assets\images\icon04.png" />
+    <Content Include="assets\images\icon05.png" />
+    <Content Include="assets\images\icon06.png" />
+    <Content Include="assets\images\img01.png" />
+    <Content Include="assets\images\img02.png" />
+    <Content Include="assets\images\img03.png" />
+    <Content Include="assets\images\img04.png" />
+    <Content Include="assets\images\img05.png" />
+    <Content Include="assets\images\img06.png" />
+    <Content Include="assets\images\img07.png" />
+    <Content Include="assets\images\img08.png" />
+    <Content Include="assets\images\img09.png" />
+    <Content Include="assets\images\img10.png" />
+    <Content Include="assets\images\img11.png" />
+    <Content Include="assets\images\img12.png" />
+    <Content Include="assets\images\img13.png" />
+    <Content Include="assets\images\img14.png" />
+    <Content Include="assets\images\img15.png" />
+    <Content Include="assets\images\inputbg.gif" />
+    <Content Include="assets\images\itabbg.png" />
+    <Content Include="assets\images\itabbg1.png" />
+    <Content Include="assets\images\jy1.jpg" />
+    <Content Include="assets\images\jy2.jpg" />
+    <Content Include="assets\images\jy3.jpg" />
+    <Content Include="assets\images\jy4.jpg" />
+    <Content Include="assets\images\leftico.png" />
+    <Content Include="assets\images\leftico01.png" />
+    <Content Include="assets\images\leftico02.png" />
+    <Content Include="assets\images\leftico03.png" />
+    <Content Include="assets\images\leftico04.png" />
+    <Content Include="assets\images\leftline.gif" />
+    <Content Include="assets\images\leftmenubg.gif" />
+    <Content Include="assets\images\lefttop.gif" />
+    <Content Include="assets\images\libg.png" />
+    <Content Include="assets\images\light.png" />
+    <Content Include="assets\images\lin.jpg" />
+    <Content Include="assets\images\line.gif" />
+    <Content Include="assets\images\line1.png" />
+    <Content Include="assets\images\ling.jpg" />
+    <Content Include="assets\images\lingdao.jpg" />
+    <Content Include="assets\images\list.gif" />
+    <Content Include="assets\images\list1.gif" />
+    <Content Include="assets\images\list2.png" />
+    <Content Include="assets\images\loginbg1.png" />
+    <Content Include="assets\images\loginbg2.png" />
+    <Content Include="assets\images\loginbg3.png" />
+    <Content Include="assets\images\logininfo.png" />
+    <Content Include="assets\images\loginlogo.png" />
+    <Content Include="assets\images\loginpassword.png" />
+    <Content Include="assets\images\loginsj.png" />
+    <Content Include="assets\images\loginuser.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\msg.png" />
+    <Content Include="assets\images\navbg.png" />
+    <Content Include="assets\images\next.gif" />
+    <Content Include="assets\images\person.png" />
+    <Content Include="assets\images\person1.png" />
+    <Content Include="assets\images\person2 %282%29.png" />
+    <Content Include="assets\images\person2.png" />
+    <Content Include="assets\images\person3.png" />
+    <Content Include="assets\images\popup_close.gif" />
+    <Content Include="assets\images\popup_title.gif" />
+    <Content Include="assets\images\pre.gif" />
+    <Content Include="assets\images\px.gif" />
+    <Content Include="assets\images\righttop.gif" />
+    <Content Include="assets\images\rlist.gif" />
+    <Content Include="assets\images\search.png" />
+    <Content Include="assets\images\sh_point.gif" />
+    <Content Include="assets\images\sj.png" />
+    <Content Include="assets\images\sl_point.png" />
+    <Content Include="assets\images\sl_point_done.png" />
+    <Content Include="assets\images\sun.png" />
+    <Content Include="assets\images\s_point.png" />
+    <Content Include="assets\images\t01.png" />
+    <Content Include="assets\images\t02.png" />
+    <Content Include="assets\images\t03.png" />
+    <Content Include="assets\images\t04.png" />
+    <Content Include="assets\images\t05.png" />
+    <Content Include="assets\images\tbg.png" />
+    <Content Include="assets\images\tcbg.gif" />
+    <Content Include="assets\images\tg.jpg" />
+    <Content Include="assets\images\th.gif" />
+    <Content Include="assets\images\ticon.png" />
+    <Content Include="assets\images\time.png" />
+    <Content Include="assets\images\toolbg.gif" />
+    <Content Include="assets\images\topbg.gif" />
+    <Content Include="assets\images\topleft.jpg" />
+    <Content Include="assets\images\topright.jpg" />
+    <Content Include="assets\images\touxiang.jpg" />
+    <Content Include="assets\images\ub1.png" />
+    <Content Include="assets\images\uew_icon.png" />
+    <Content Include="assets\images\uew_icon_hover.png" />
+    <Content Include="assets\images\ulist.png" />
+    <Content Include="assets\images\user.png" />
+    <Content Include="assets\images\userbg.png" />
+    <Content Include="assets\images\zy1.jpg" />
+    <Content Include="assets\images\zy2.jpg" />
+    <Content Include="assets\images\复件 ico01.png" />
+    <Content Include="assets\js\cloud.js" />
+    <Content Include="assets\js\dept.js" />
+    <Content Include="assets\js\format+zh_CN,default,corechart.I.js" />
+    <Content Include="assets\js\jquery-1.4.4.min.js" />
+    <Content Include="assets\js\jquery.ba-resize.min.js" />
+    <Content Include="assets\js\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="assets\js\jquery.idTabs.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.ztree.core-3.5.js" />
+    <Content Include="assets\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="assets\js\jquery\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="assets\js\jquery\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\js\jquery\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="assets\js\jquery\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\js\jquery\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\js\jquery\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="assets\js\jquery\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\js\jquery\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\js\jquery\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\js\jquery\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\js\jquery\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\js\jquery\jquery-1.10.2.js" />
+    <Content Include="assets\js\jquery\jquery-ui-1.11.4.css" />
+    <Content Include="assets\js\jquery\jquery-ui-1.11.4.js" />
+    <Content Include="assets\js\jquery\jquery.ba-resize.min.js" />
+    <Content Include="assets\js\jquery\jquery.gvChart-1.0.1.min.js" />
+    <Content Include="assets\js\jquery\jquery.idTabs.min.js" />
+    <Content Include="assets\js\jquery\jquery.ztree.core-3.5.js" />
+    <Content Include="assets\js\jquery\jquery.ztree.core-3.5.min.js" />
+    <Content Include="assets\js\jsapi.js" />
+    <Content Include="assets\js\map.js" />
+    <Content Include="assets\js\map2.js" />
+    <Content Include="assets\js\map3.js" />
+    <Content Include="assets\js\PIE.htc" />
+    <Content Include="assets\js\select-ui.min.js" />
+    <Content Include="left.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="main.html" />
+    <Content Include="monitor.html" />
+    <Content Include="monitor_pirates.html" />
+    <Content Include="monitor_rescue.html" />
+    <Content Include="power.html" />
+    <Content Include="Register.aspx" />
+    <Content Include="report-1.html" />
+    <Content Include="shengtai-1.html" />
+    <Content Include="shengtai.html" />
+    <Content Include="top.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionAboutAttendance.aspx.cs">
+      <DependentUpon>ActionAboutAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActionAboutAttendance.aspx.designer.cs">
+      <DependentUpon>ActionAboutAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActionAboutUser.asmx.cs">
+      <DependentUpon>ActionAboutUser.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActionAboutUser.aspx.cs">
+      <DependentUpon>ActionAboutUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActionAboutUser.aspx.designer.cs">
+      <DependentUpon>ActionAboutUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recheckupload.aspx.cs">
+      <DependentUpon>recheckupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recheckupload.aspx.designer.cs">
+      <DependentUpon>recheckupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="top.aspx.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="top.aspx.designer.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RoadSolution.BLL\RoadSolution.BLL.csproj">
+      <Project>{b21e5141-eabb-440b-a806-768dcd9a5d92}</Project>
+      <Name>RoadSolution.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoadSolution.DBUtils\RoadSolution.DBUtils.csproj">
+      <Project>{e325fccf-40b4-414a-8f63-9b4134f2905a}</Project>
+      <Name>RoadSolution.DBUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoadSolution.Model\RoadSolution.Model.csproj">
+      <Project>{64cdfd9e-6c8b-4f16-b608-162408d33c64}</Project>
+      <Name>RoadSolution.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3820</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3802/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

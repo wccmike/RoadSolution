@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zn" xml:lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <title>Document</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css"
+  />
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css"
+  />
+  <script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">地图管理</a></li>
+      <li><a href="#">轨迹显示</a></li>
+    </ul>
+  </div>
+  <div class="mainindex">
+    <div> </div>
+    <div>
+      <ul class="seachform">
+        <li><label>姓名</label><input name="" type="text" value="" class="scinput" /></li>
+        <li><label>道路</label><input name="" type="text" value="" class="scinput" /></li>
+        <li> <label>人员类型</label> <select name="" id="personType">
+                      <option value="-1">空</option>
+                      <option value="1">指挥中心</option>
+                      <option value="2">路长</option>
+                      <option value="3">信息采集员</option>
+                  </select> </li>
+        <li><label>日期</label><input class="scinput" name="" type="date" value="" /></li>
+        <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"
+          /></li>
+      </ul>
+    </div>
+    <table class="tablelist">
+      <thead>
+        <tr>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工号</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年龄</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路名</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;部门</th>
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;详情</th>
+        </tr>
+        <tr align="center">
+          <td>1</td>
+          <td>张三</td>
+          <td>男</td>
+          <td>12</td>
+          <td><img src="assets/images/1.png" /></td>
+          <td>解放路</td>
+          <td>安全部</td>
+          <td><a href="tracedetail.html">进入</a></td>
+        </tr>
+        <tr align="center">
+          <td>2</td>
+          <td>李四</td>
+          <td>男</td>
+          <td>25</td>
+          <td><img src="assets/images/1.png" /></td>
+          <td>西五路</td>
+          <td>环保部</td>
+          <td><a href="tracedetail.html">进入</a></td>
+        </tr>
+        <tr align="center">
+          <td>3</td>
+          <td>王五</td>
+          <td>男</td>
+          <td>40</td>
+          <td><img src="assets/images/1.png" /></td>
+          <td>自强路</td>
+          <td>监管部</td>
+          <td><a href="tracedetail.html">进入</a></td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pagin">
+    <div class="message">共<i class="blue">3</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+    <ul class="paginList">
+      <li class="paginItem current"><a href="javascript:;"><span class="pagepre">上页</span></a></li>
+      <li class="paginItem"><a href="javascript:;">1</a></li>
+      <li class="paginItem current "><a href="javascript:;"><span class="pagenxt">下页</span></a></li>
+    </ul>
+  </div>
+  <div class="tip">
+    <div class="tiptop"><span>提示信息</span><a></a></div>
+    <div class="tipinfo"> <span><img src="assets/images/ticon.png" /></span>
+      <div class="tipright"> <p>是否确认对信息的修改 ？</p> <cite>如果是请点击确定按钮 ，否则请点取消。</cite> </div>
+    </div>
+    <div class="tipbtn"> <input name="" type="button" class="sure" value="确定" />&nbsp; <input name=""
+        type="button" class="cancel" value="取消" /> </div>
+  </div>
+  </div>
+</body>
+
+</html>

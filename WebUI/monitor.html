@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width"
+  />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <title>系统管理</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css"
+  />
+  <link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css"
+  />
+  <link rel="stylesheet" href="assets/css/map.css" type="text/css" />
+  <link rel="stylesheet" href="assets/js/jquery/jquery-ui-1.11.4.css" type="text/css"
+  />
+  <script type="text/javascript" src="assets/js/jquery/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="assets/js/jquery/jquery-ui-1.11.4.js"></script>
+  <script type="text/javascript" src="assets/js/jquery/jquery.ztree.core-3.5.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3vMZ48pXHSdF16gz33gBh2ZR3wLlDXdL"></script>
+  <!-- 加载百度地图样式信息窗口 -->
+  <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+  <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"
+  />
+  <script type="text/javascript" src="assets/js/dept.js"></script>
+  <script type="text/javascript" src="assets/js/map3.js"></script>
+  <script language="javascript"></script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li> <a href="javascript:void(0);">首页</a> </li>
+      <li> <a href="#">地图管理</a> </li>
+      <li> <a href="#">人员总览</a> </li>
+    </ul>
+  </div>
+  <div class="rightinfo">
+    <table width="100%">
+      <tr>
+        <td width="200" valign="top">
+          <ul id="tree" class="ztree" style="width:200px; overflow:auto;"></ul>
+        </td>
+        <td>
+          <div class="itab">
+            <ul>
+              <li> <a href="#m-map" class="selected">地图监控</a> </li>
+              <li> <a href="#p-map">人员跟踪</a> </li>
+            </ul>
+          </div>
+          <div id="monitor-map">
+            <table width="100%">
+              <tr>
+                <td>
+                  <div id="m-map" class="o-map"></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="preson-track" style="display: none;">
+            <table width="100%">
+              <tr>
+                <td valign="top">
+                  <div id="p-map" class="o-map"></div>
+                </td>
+                <td width="200" valign="top">
+                  <div class="person-info">
+                    <div class="item" style="height: 80px;"><img src="assets/images/touxiang.jpg" style="width: 80px; height: 80px;"
+                      /></div>
+                    <div class="item">
+                      <font>姓名</font>：张胡源</div>
+                    <div class="item">
+                      <font>性别</font>：男</div>
+                    <div class="item" style="width: 180px;">
+                      <font>电话</font>：18293344343</div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="track_histroy">
+                    <div class="title">历史轨迹</div>
+                    <div class="item">
+                      <div> <a href="javascript:void(0);">当天</a> </div>
+                      <div> <a href="javascript:void(0);">三天</a> </div>
+                      <div> <a href="javascript:void(0);">一周</a> </div>
+                      <div> <a href="javascript:void(0);">一月</a> </div>
+                      <div> <a href="javascript:void(0);">三月</a> </div>
+                      <div> <a href="javascript:void(0);">半年</a> </div>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="task_list">
+                    <div class="title">任务列表</div>
+                    <div class="item">
+                      <ul>
+                        <li>
+                          <div class="title"> <a href="javascript:void(0);">垃圾处理</a> </div>
+                          <div class="state done">
+                          完成
+                            <div>
+                              <div class="clear"></div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="title"> <a href="javascript:void(0);">维护井盖</a> </div>
+                          <div class="state">
+                          未完成
+                            <div>
+                              <div class="clear"></div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div id="dialog-modal" class="m-dialog-modal">
+      <div class="task">
+        <div class="baseinfo">
+          <div class="item title"></div>
+          <div class="item"> <span class="title"></span></div>
+          <div class="item"> <span class="title"></span>
+            <font style="color:green;"></font>
+          </div>
+          <div class="item"> <span class="title"></span></div>
+        </div>
+        <div class="remark"> <span class="title"></span> <p></p> </div>
+        <div class="photos"> <span class="title">图片：</span>
+          <div class="list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

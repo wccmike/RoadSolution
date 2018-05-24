@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+});
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">管护调度</a></li>
+     <li><a href="#">应急处理</a></li>
+    </ul>
+    </div>
+    <div class="formbody">
+    <div id="usual1" class="usual"> 
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">添加</a></li> 
+    </ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    
+    <ul class="forminfo">
+    
+ <li><label>县区<b>*</b></label>
+		    <div class="usercity">
+				<div class="cityleft">
+					<select class="select1">
+						<option>汉滨区</option>
+						<option>白河县</option>
+						<option>汉阴县</option>
+						<option>石泉县</option>
+						<option>平利县</option>
+					</select>
+				</div>
+			</div>
+	 </li>
+
+ <li><label>管护站<b>*</b></label>
+		    <div class="usercity">
+				<div class="cityleft">
+					<select class="select1">
+						<option>流水镇</option>
+						<option>恒口镇</option>
+						<option>五里镇</option>
+						<option>建民镇</option>
+						
+					</select>
+				</div>
+			</div>
+	 </li>
+
+ <li><label>电子围栏<b>*</b></label>
+		    <div class="usercity">
+				<div class="cityleft">
+					<select class="select1">
+						<option>围栏1</option>
+						<option>围栏2</option>
+						<option>围栏3</option>
+						<option>围栏4</option>
+						
+					</select>
+				</div>
+			</div>
+	 </li>
+     
+	
+    
+    
+     <li><label>任务类型<b>*</b></label>
+		    <div class="usercity">
+				<div class="cityleft">
+					<select class="select1">
+						<option>森林火险</option>
+						<option>盗伐取证</option>
+						<option>紧急救援</option>
+						<option>森林病害</option>
+						<option>资源调查</option>
+					</select>
+				</div>
+			</div>
+	 </li>
+
+     <li><label>接单人<b>*</b></label>
+		    <div class="usercity">
+				<div class="cityleft">
+					<select class="select1">
+						<option>白洋</option>
+						<option>曾俊</option>
+						<option>李浩杰</option>
+						<option>胡唐明</option>
+						
+					</select>
+				</div>
+			</div>
+	 </li>
+   
+    <li><label>派单领导<b>*</b></label><input name="" type="text" class="dfinput" value="李志"   style="width:518px;"/></li>
+	<li><label>任务名<b>*</b></label><input name="" type="text" class="dfinput" value="紧急救援"  style="width:518px;"/></li>
+	  <li><label>注意要点</label><textarea name="" cols="" rows="" class="textinput">救人如救火，速度要快</textarea></li>
+	 
+    <li>
+	<a href="12-3.html"><label>&nbsp;</label><input name="" type="button" class="btn" value="提交信息"/></a>
+	<a href="12-3.html"><label>&nbsp;</label><input name="" type="button" class="btn" value="返回"/></a>
+	</li>
+    </ul>
+    
+    </div> 
+    
+      
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    </div>
+
+
+</body>
+
+</html>

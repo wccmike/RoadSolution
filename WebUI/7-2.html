@@ -1,0 +1,116 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+        $(".select1").uedSelect({ });
+		// 获取表格对象
+		var dataTable = $(".tablelist");
+		for(var i=0; i<lyzzgs.length; i++){
+			var lyzz = lyzzgs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			htmlRow += "<td>" + lyzz.name + "</td>";	
+			htmlRow += "<td>" + lyzz.publishState + "</td>";
+            htmlRow += "<td>" + lyzz.times + "</td>";
+			htmlRow += "<td>" + lyzz.createTime + "</td>";
+			htmlRow += "<td><a href='7-4-4.html' class='tablelink'>查看</a></td>";
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+
+    <li><a href="#">路名管理</a></li>
+    <li><a href="#">路名管理</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    <div class="welinfo" >
+		<ul>
+		
+			<li><label>标题&nbsp;&nbsp;</label><input name="" type="text"  class="scinput" /><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+		
+		</ul>
+    </div>
+    
+    <div class="xline" align="center"></div>
+    <div class="tools">
+    
+    	<ul class="toolbar">
+        <li><a href="7-2set.html"><span><img src="assets/images/t01.png" /></span>添加</a></li>
+        <li ><a href="7-22set.html"><span><img src="assets/images/t02.png" /></span>修改</a></li>
+        <li ><span><img src="assets/images/t03.png" /></span>删除</a></li>
+        </ul>
+        
+        
+      
+    </div>
+    
+    
+     <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+      
+        <th>编号</th>
+        <th>路名</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+   
+     <table class="tablelist">
+    	<thead>
+    	<tr>
+        <td><input name="" type="checkbox" value="" checked="checked"/></td>
+      
+        <td>1</td>
+        <td>自强路</td>
+        </tr>
+		<tr>
+        <td><input name="" type="checkbox" value="" checked="checked"/></td>
+      
+        <td>2</td>
+        <td>东五路</td>
+        </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+   
+</body>
+
+</html>

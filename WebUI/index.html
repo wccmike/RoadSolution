@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jsapi.js"></script>
+<script type="text/javascript" src="assets/js/format+zh_CN,default,corechart.I.js"></script>		
+<script type="text/javascript" src="assets/js/jquery.gvChart-1.0.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ba-resize.min.js"></script>
+
+<script type="text/javascript">
+		gvChartInit();
+		jQuery(document).ready(function(){
+
+		jQuery('#myTable5').gvChart({
+				chartType: 'PieChart',
+				gvSettings: {
+					vAxis: {title: 'No of players'},
+					hAxis: {title: 'Month'},
+					width: 650,
+					height: 250
+					}
+			});
+		});
+		</script>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+  
+    </ul>
+    </div>
+    
+    
+    <div class="mainbox">
+    
+    <div class="mainleft">
+    
+    
+    <div class="leftinfo">
+    <div class="listtitle"><a href="#" class="more1">更多</a>资料数据统计</div>
+        
+    <div class="maintj">  
+    <table id='myTable5'>
+				
+				<thead>
+					<tr>
+						<th></th>
+						<th>IT类资料</th>
+						<th>法律类资料</th>
+						<th>财务类资料</th>
+						<th>管理类资料</th>
+						<th>其他</th>
+						
+					</tr>
+				</thead>
+					<tbody>
+					<tr>
+						<th>2010</th>
+						<td>125</td>
+						<td>185</td>
+						<td>327</td>
+						<td>359</td>
+						
+					</tr>
+				</tbody>
+			</table>  
+    </div>
+    
+    </div>
+    <!--leftinfo end-->
+    
+    
+    <div class="leftinfos">
+    
+   
+    <div class="infoleft">
+    
+    <div class="listtitle"><a href="#" class="more1">更多</a>待办事项</div>    
+    <ul class="newlist">
+    <li><a href="#">中国电信业务产品介绍 审核</a><b>10-09</b></li>
+    <li><a href="#">知识设置</a><b>10-08</b></li>
+    <li><a href="#">临时题库添加</a><b>10-09</b></li>
+    <li><a href="#">角色授权</a><b>10-06</b></li>
+    
+    </ul>   
+    
+    </div>
+    
+    
+    <div class="inforight">
+    <div class="listtitle"><a href="#" class="more1">添加</a>快捷方式</div>
+    
+    <ul class="tooli">
+    <li><span><img src="assets/images/d01.png" /></span><p><a href="#">分类设置</a></p></li>
+    <li><span><img src="assets/images/d02.png" /></span><p><a href="#">知识转移</a></p></li>
+    <li><span><img src="assets/images/d03.png" /></span><p><a href="#">文档审核</a></p></li>
+    <li><span><img src="assets/images/d07.png" /></span><p><a href="#">临时题库</a></p></li>
+    <li><span><img src="assets/images/d05.png" /></span><p><a href="#">考试题</a></p></li>
+      
+    </ul>
+    
+    </div>
+    
+    
+    </div>
+    
+    
+    </div>
+    <!--mainleft end-->
+    
+    
+    <div class="mainright">
+    
+    
+    <div class="dflist">
+    <div class="listtitle"><a href="#" class="more1">更多</a>最新信息</div>    
+    <ul class="newlist">
+    <li><a href="#">上传 《第5课欧洲封建文明》</a></li>
+    <li><a href="#">分享 《M1U2 you should sm...》</a></li>
+    <li><a href="#">分享 《预防计算机安全》</a></li>
+    <li><a href="#">上传 《Frameworx方法论及应...》</a></li>
+    <li><a href="#">上传 《整个网站优化文章,内...》/a></li>
+    <li><a href="#">上传  2014年注册安全工程师考试模拟试卷</a></li>
+   
+    </ul>        
+    </div>
+    
+    
+    <div class="dflist1">
+    <div class="listtitle"><a href="#" class="more1">更多</a>信息统计</div>    
+    <ul class="newlist">
+    <li><i>用户总数：</a></i>2535462</li>
+    <li><i>文档总数：</a></i>5546</li>
+    <li><i>试题总数：</a></i>2315</li>
+    <li><i>题库分类数:</a></i>2315</li>
+    
+       
+    </ul>        
+    </div>
+    
+    
+
+    
+    
+    </div>
+    <!--mainright end-->
+    
+    
+    </div>
+
+
+
+</body>
+<script type="text/javascript">
+	setWidth();
+	$(window).resize(function(){
+		setWidth();	
+	});
+	function setWidth(){
+		var width = ($('.leftinfos').width()-12)/2;
+		$('.infoleft,.inforight').width(width);
+	}
+</script>
+</html>

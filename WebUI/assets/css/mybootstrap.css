@@ -1,0 +1,30 @@
+.navbar-narrow {
+  max-height: 50px;
+}
+.text-black {
+  color: #000;
+}
+.table-thlessw th {
+  width: 110px;
+}
+.table-thmw th {
+  width: 120px;
+}
+.btn {
+  width: auto;
+  height: auto;
+}
+.usernametext {
+  font-size: 180%;
+  color: #fff;
+}
+.map {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+.rightsch {
+  overflow-y: scroll;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="assets/css/map.css" type="text/css">
+<link rel="stylesheet" href="assets/js/jquery/jquery-ui-1.11.4.css" type="text/css">
+<script type="text/javascript" src="assets/js/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="assets/js/jquery/jquery-ui-1.11.4.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A4749739227af1618f7b0d1b588c0e85"></script>
+<!--加载鼠标绘制工具-->
+<script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+<style type="text/css">
+	.main-content .option{
+		padding: 10px;
+	}
+</style>
+<script type="text/javascript">
+<!--
+	$(function(){
+		// 百度地图API功能
+		var map = new BMap.Map('m-map');
+		var poi = new BMap.Point(116.307852,40.057031);
+		map.centerAndZoom(poi, 16);
+		map.enableScrollWheelZoom();  
+
+		var overlays = [];
+
+		var styleOptions = {
+			strokeColor:"red",    //边线颜色。
+			fillColor:"red",      //填充颜色。当参数为空时，圆形将没有填充效果。
+			strokeWeight: 2,       //边线的宽度，以像素为单位。
+			strokeOpacity: 0.8,	   //边线透明度，取值范围0 - 1。
+			fillOpacity: 0.4,      //填充的透明度，取值范围0 - 1。
+			strokeStyle: 'solid' //边线的样式，solid或dashed。
+		}
+
+		//实例化鼠标绘制工具
+		var drawingManager = new BMapLib.DrawingManager(map, {
+			isOpen: false, //是否开启绘制模式
+			enableDrawingTool: true, //是否显示工具栏
+			drawingToolOptions: {
+				anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+				offset: new BMap.Size(5, 5), //偏离值
+				drawingModes : [
+					BMAP_DRAWING_CIRCLE,    
+					BMAP_DRAWING_RECTANGLE,
+					BMAP_DRAWING_POLYGON
+				]  
+			},
+			circleOptions: styleOptions, //圆的样式
+			polygonOptions: styleOptions, //多边形的样式
+			rectangleOptions: styleOptions //矩形的样式
+		});
+
+		//添加鼠标绘制工具监听事件，用于获取绘制结果
+		var selectDraw = null;
+		drawingManager.addEventListener('overlaycomplete', function(e){
+			drawingManager.close();
+			selectDraw = e;
+			$( "#dialog-modal" ).dialog({
+				  title: "围栏设置",
+				  modal: true,
+				  width: 450
+			});
+		});
+
+		// 双击地图结束绘制模式
+		map.addEventListener('dblclick', function(){
+			drawingManager.close();
+		});
+
+		function BindRemoveEvent(overlay){
+			var removeMarker = function(e,ee,overlay){
+				map.removeOverlay(overlay);
+			}
+			//创建右键菜单
+			var markerMenu=new BMap.ContextMenu();
+			markerMenu.addItem(new BMap.MenuItem('详情',function(){
+				$( "#dialog-modal-detail" ).dialog({
+				  title: "围栏详情",
+				  modal: true,
+				  width: 400
+				});
+			}));
+			markerMenu.addItem(new BMap.MenuItem('删除',removeMarker.bind(overlay)));
+			overlay.addContextMenu(markerMenu);
+		}
+		
+		// 确定
+		$(".dialog_confirm_btn").bind("click", function(){
+			$("#dialog-modal").dialog("close");
+			if (selectDraw.drawingMode == BMAP_DRAWING_CIRCLE) {
+				// 绘圆
+				// 获取半径
+				var radius = selectDraw.overlay.getRadius();
+				// 获取原中心点
+				var lng = selectDraw.overlay.getCenter().lng;
+				var lat = selectDraw.overlay.getCenter().lat;
+				// 删除刚绘制原形图
+				map.removeOverlay(selectDraw.overlay);
+
+				// 重新绘制圆
+				var point = new BMap.Point(lng, lat); 
+				var circle = new BMap.Circle(point, radius, styleOptions); 
+				map.addOverlay(circle);
+				new BindRemoveEvent(circle);
+			}else if(selectDraw.drawingMode == BMAP_DRAWING_RECTANGLE){
+				// 矩形
+				// 获取矩形4个点
+				var points = selectDraw.overlay.getPath();
+				// 删除刚绘制矩形图
+				map.removeOverlay(selectDraw.overlay);
+				var polygon = new BMap.Polygon(points, styleOptions); 
+				map.addOverlay(polygon);
+				new BindRemoveEvent(polygon);
+			}else if(selectDraw.drawingMode == BMAP_DRAWING_POLYGON){
+				// 多边形
+				// 获取矩形每个顶点
+				var points = selectDraw.overlay.getPath();
+				// 删除刚绘制矩形图
+				map.removeOverlay(selectDraw.overlay);
+				var polygon = new BMap.Polygon(points, styleOptions); 
+				map.addOverlay(polygon);
+				new BindRemoveEvent(polygon);
+			}
+		});
+
+		$(".dialog_cancel_btn").bind("click", function(){
+			map.removeOverlay(selectDraw.overlay);
+			$("#dialog-modal").dialog("close");
+			$("#dialog-modal-detail").dialog("close");
+		});
+
+		// 地图自适应
+		$(window).resize(function () { 
+			// 计算界面高度
+			lrResize();
+		});
+
+		function lrResize(){
+			//获取浏览器可见区域高度
+			var ht = $(window).height() - 50;
+			$(".o-map").css({"height": ht + "px"});
+		};
+
+		lrResize();
+
+		
+		$(".select1").uedSelect({width : 167  });
+	});
+//-->
+</script>
+</head>
+<body>
+  <div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+		<li><a href="#">首页</a></li>
+		<li><a href="#">系统管理</a></li>
+		<li><a href="#">电子围栏</a></li>
+		<li><a href="#">新增</a></li>
+    </ul>
+   </div>
+   <div class="main-content">
+		<div id="m-map" class="o-map"></div>
+   </div>
+
+   <div id="dialog-modal" class="m-dialog-modal">
+		<div class="dialog-content" style="padding-left: 40px;">
+			<div class="item">
+				<table width="auot">
+					<tr>
+						<td style="line-height:35px; width:65px;"><span class="title">县区：</span></td>
+						<td style="line-height:35px;padding-top: 6px;"><select class="select1">
+							<option>汉滨区</option>
+							<option>白河县</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table width="auot">
+					<tr>
+						<td style="line-height:35px; width:65px;"><span class="title">护林区：</span></td>
+						<td style="line-height:35px;padding-top: 6px;">
+							<select class="select1">
+							 <option>凤凰山</option>
+							 <option>南宫山</option>
+							 <option>化龙山</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<span class="title">围栏名称：</span>
+				<input class="scinput" style="width: 250px;">
+			</div>
+			<div class="item-c">
+				<span class="title">围栏描述：</span>
+				<textarea class="textarea" style="width: 230px;"></textarea>
+			</div>
+			<div class="item">
+				<input type="button" class="scbtn dialog_confirm_btn" value="确认">
+				<input type="button" class="scbtn dialog_cancel_btn" value="取消">
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="dialog-modal-detail" class="m-dialog-modal">
+		<div class="dialog-content2" style="padding-left: 40px;">
+			<div class="item">
+				<span class="title">县区：</span>汉滨区
+			</div>
+			<div class="item">
+				<span class="title">护林区：</span>凤凰山
+			</div>
+			<div class="item">
+				<span class="title">围栏名称：</span>凤凰山围栏2区
+			</div>
+			<div class="item">
+				<span class="title">描述：</span>凤凰山围栏2区
+			</div>
+			<div >
+				<input type="button" class="scbtn dialog_cancel_btn" value="关闭">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

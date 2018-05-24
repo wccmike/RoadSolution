@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<link rel="stylesheet" href="assets/css/demo.css" type="text/css">
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<!--<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>-->
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  <script type="text/javascript">
+    KE.show({
+        id : 'content',
+        cssPath : './index.css'
+    });
+  </script>
+   <script type="text/javascript">
+    KE.show({
+        id : 'content1',
+        cssPath : './index.css'
+    });
+  </script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+<SCRIPT type="text/javascript">
+		
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+
+		var zNodes =[
+			{ name:"中国电信", open:true,
+				children: [
+					{ name:"陕通信息",
+						children: [
+							{ name:"产品研发部"},
+							{ name:"销售部"},
+							{ name:"后勤部"},
+							{ name:"通信部"}
+						]}
+					
+				]},
+			{ name:"中国电信",
+				children: [
+					{ name:"陕通信息",
+						children: [
+							{ name:"产品研发部"},
+							{ name:"销售部"},
+							{ name:"后勤部"},
+							{ name:"通信部"}
+						]}
+					
+				]}
+			
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		
+	</SCRIPT>
+	<SCRIPT type="text/javascript">
+		
+		var setlist = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+
+		var zTree =[
+			{ name:"社会经济类", open:true,
+				children: [
+					{ name:"社会经济学",
+						children: [
+							{ name:"初级经济学"},
+							{ name:"高级经济学"},
+							{ name:"经济管理学"},
+							
+						]}
+					
+				]},
+			{ name:"企业发展类",
+				children: [
+					{ name:"中型企业",
+						children: [
+							{ name:"企业规划"},
+							{ name:"企业背景"},
+							{ name:"企业文化"},
+							{ name:"企业市场"}
+						]}
+					
+				]}
+			
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#tree"), setlist, zTree);
+		});
+		
+	</SCRIPT>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">业务学习</a></li>
+     <li><a href="#">自我救援</a></li>
+    </ul>
+    </div>
+    <div class="formbody">
+    <div id="usual1" class="usual"> 
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">添加信息</a></li> 
+    </ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    
+   
+    
+    <ul class="forminfo">
+    <li><label>标题<b>*</b></label><input name="" type="text" class="dfinput" value="迷路自救的方法"  style="width:518px;"/></li>
+     
+     <li><label>内容<b>*</b></label>
+    <textarea id="content" name="content" style="width:700px;height:250px;visibility:hidden;">
+	  <p>  1·你必须随时随地观察周围的地形，以确定方向。在你离开自己的帐蓬、汽车、独木桥、小船等物之前，要仔细观察周围地形，尽可能远地目测一下这一地区，确定左右各种固定的目标向导，如山峰、绝壁、寺庙、大树等。 </p> 
+
+<p>2·出发前要对你营地周围那些突出的目标有个清楚的记忆，以使在你返回时，能用这些目标作向导。</p>   
+
+<p>3·当你离开一条道路，一条小溪，一条小径，一条河流，一个山峰或一座寺庙时，要记住是从哪一边离开的，把这些作为基本路线。</p>   
+
+<p>4·记住来时与返回时你经过了多少溪流，旅途经过了多少山峰，多少叉道。将自己走过的路画一个线路图。 </p>  
+
+
+
+<p>5·如果发现自己处于一个陌生的地域，并难以找到返回自己营地的道路，此时不要说自己迷了路，至少现在不是你也许就是几分钟内的迷惑。</p>   
+
+<p>6·如怀疑自己迷了路，应该立即停下来估计一下情况，盲目地继续前进，处境会更糟。不要惊慌，请坐下来，放松一下。做做深呼吸，抽一支烟，嚼块口香糖，仔细回忆一下经过的房屋、溪流或其它地理特征，以追寻自己曾经走过的路线。静静地坐上几分钟。</p>   
+
+<p>7·当野游者刚发现他难以确定自己的方位时，一般情况下他并未走多远，不会找不到路。麻烦的是大多数迷路者继续盲目前进，在森林中乱窜乱钻，使自己的处境更糟，一些迷路者甚至完全走出了搜寻地区的范围。  </p> 
+
+<p>8·有地图的话，先查一查图例，看看每个符号代表什么，并且找出自己立足处大概在地图上哪一区。看看周围有没有与地理标识相符的地理特征。在地图上找出迷路前的位置，然后回忆一下经过的房屋，溪流或其它地理特征，以追寻自己曾经走过的路线。 </p>  
+
+<p>9·查看地图上的等高线，以了解周围的地形。等高线彼此相距较远表示山势平缓，没有等高线表示平原或宽阔山脊，等高线绕成指纹状则多是山嘴或山谷。根据地图上的比例尺，比方说，比例尺为1：50000，就表示图上1公分代表实际长度50000公分（0．5公里），用小尺子计算自己与目标物的距离。如果没有纸笔，可用手指粗略测算距离，一般来说，成人的食指从指尖到第一个关节约长2.5厘米。 </p>  
+
+<p>10·转动地图，使图上标的与它所代表的地理特征在同一方向，然后按图选取某个方向走到大路或有人烟的地方。</p> 
+   
+	</textarea>
+    </li>
+	
+	
+	<li><a href="13-1.html"><label>&nbsp;</label><input name="" type="button" class="btn" value="提交信息"/></a></li>
+	
+    
+    </div>
+
+
+</body>
+
+</html>

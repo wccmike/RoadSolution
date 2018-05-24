@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="zh" xml:lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+          content="initial-scale=1.0, user-scalable=no, width=device-width" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <title>无标题文档</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+    <script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="assets/js/dept.js"></script>
+
+    <script language="javascript">
+        $(function () {
+            Dept.Tree.init($("#tree"));
+        })
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">个人</a></li>
+            <li><a href="#">个人信息修改</a></li>
+        </ul>
+    </div>
+
+    <div class="formbody">
+
+
+        <div id="usual1" class="usual">
+
+            <div class="itab">
+                <ul>
+                    <li><a href="#tab1" class="selected">个人信息</a></li>
+
+                </ul>
+            </div>
+
+            <div id="tab1" class="tabson">
+                <ul class="forminfo">
+                    <li>
+                        <label>所属部门</label><input value="政" type="text"
+                                                  class="dfinput" width="518px" />
+                    </li>
+                    <li>
+                        <label>所属道路</label><input value="中山路" type="text"
+                                                  class="dfinput" width="518px" />
+                    </li>
+                    <li>
+                        <label>所属路长Id</label><input value="cc543e8a-f436-4be1-bf58-34152ca4ce1d" type="text"
+       class="dfinput" width="518px" />
+                    </li>
+                    <li>
+                        <label>名字</label><input value="liuke" type="text"
+                                                class="dfinput" width="518px" />
+                    </li>
+                    <li>
+                        <label>联系电话</label><input type="text" class="dfinput"
+                                                  value="8800" width="518px" />
+                    </li>
+                    <li>
+                        <label>年龄</label><input value="5" type="text"
+                                                class="dfinput" width="518px" />
+                    </li>
+                    <li>
+                        <label>性别</label><input value="男" type="text"
+                                                class="dfinput" width="518px" />
+                    </li>
+                    <li>
+                        <label>工号</label><input value="0007" type="text"
+                                                class="dfinput" width="518px" />
+                    </li>
+                    <li><label>照片</label><input type="file" name="photoN" id="photoId" /></li>
+                    <li>
+                        <a href="emp.html">
+                            <label>&nbsp;</label>
+                            <input name="" type="button" class="btn" value="提交信息" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

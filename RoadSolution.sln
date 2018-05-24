@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSolution.DBUtils", "RoadSolution.DBUtils\RoadSolution.DBUtils.csproj", "{E325FCCF-40B4-414A-8F63-9B4134F2905A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSolution.Model", "RoadSolution.Model\RoadSolution.Model.csproj", "{64CDFD9E-6C8B-4F16-B608-162408D33C64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSolution.BLL", "RoadSolution.BLL\RoadSolution.BLL.csproj", "{B21E5141-EABB-440B-A806-768DCD9A5D92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSolution.DAL", "RoadSolution.DAL\RoadSolution.DAL.csproj", "{5AD35513-0906-4C52-81D2-13E0FC7B4714}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebUI(2)", "http://localhost:3802", "{131A3D55-6E6F-4CF2-9941-4DF721282C59}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3802"
+		Debug.AspNetCompiler.PhysicalPath = "WebUI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3802\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3802"
+		Release.AspNetCompiler.PhysicalPath = "WebUI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3802\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "WebUI\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{E58E6331-27B0-47B7-85AA-9F8546E4BD77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E325FCCF-40B4-414A-8F63-9B4134F2905A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E325FCCF-40B4-414A-8F63-9B4134F2905A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E325FCCF-40B4-414A-8F63-9B4134F2905A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E325FCCF-40B4-414A-8F63-9B4134F2905A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CDFD9E-6C8B-4F16-B608-162408D33C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CDFD9E-6C8B-4F16-B608-162408D33C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CDFD9E-6C8B-4F16-B608-162408D33C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CDFD9E-6C8B-4F16-B608-162408D33C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21E5141-EABB-440B-A806-768DCD9A5D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21E5141-EABB-440B-A806-768DCD9A5D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21E5141-EABB-440B-A806-768DCD9A5D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21E5141-EABB-440B-A806-768DCD9A5D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD35513-0906-4C52-81D2-13E0FC7B4714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD35513-0906-4C52-81D2-13E0FC7B4714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD35513-0906-4C52-81D2-13E0FC7B4714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD35513-0906-4C52-81D2-13E0FC7B4714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131A3D55-6E6F-4CF2-9941-4DF721282C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131A3D55-6E6F-4CF2-9941-4DF721282C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131A3D55-6E6F-4CF2-9941-4DF721282C59}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{131A3D55-6E6F-4CF2-9941-4DF721282C59}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E58E6331-27B0-47B7-85AA-9F8546E4BD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58E6331-27B0-47B7-85AA-9F8546E4BD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58E6331-27B0-47B7-85AA-9F8546E4BD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58E6331-27B0-47B7-85AA-9F8546E4BD77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

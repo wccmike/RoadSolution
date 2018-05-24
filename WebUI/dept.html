@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="assets/js/dept.js"></script>
+
+<script language="javascript">
+	$(document).ready(function(){
+		Dept.Tree.init($("#tree"));
+		Dept.Tree.selectNode(1);
+	});
+</script>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">系统管理</a></li>
+    <li><a href="#">部门设置</a></li>
+    </ul>
+    </div>
+	<div class="rightinfo">
+    
+    <div >
+    	<ul class="seachform">
+			<li><label>部门名称</label><input name="" type="text" value="" class="scinput" /></li>
+			<li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+		</ul>
+	  <div class="xline" align="center"></div>
+    <div class="tools">
+    
+    	<ul class="toolbar">
+        <li><a href="deptAdd.html"><span><img src="assets/images/t01.png" /></span>添加</a></li>
+        <li ><a href="deptUpdate.html"><span><img src="assets/images/t02.png" /></span>修改</a></li>
+        <li><span><img src="assets/images/t03.png" /></span>删除</li>
+        </ul>
+      
+    </div>
+	<div class="xline" align="center"></div>
+    
+	<div >
+    
+    <div style="width:23%;float:left" >
+		<ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+    </div>
+    <div style="width:75%;float:left" >
+
+    <table class="imgtable">
+		<thead>
+			<tr>
+				<th>部门名称</th>
+				<th>上级部门</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr align="center">
+				<td><a href="#">新城区，咸宁路</a><p>时间：2017-07-05 09:25:18</p></td>
+				<td>新城区四城联创</td>
+			   
+				
+				<td><a href="deptDetail.html" class="tablelink">查看</a></td>
+			</tr>
+			<tr align="center">
+				<td><a href="#">新城区，咸宁路</a><p>时间：2017-07-05 09:25:18</p></td>
+				<td>新城区四城联创</td>
+			   
+				
+				<td><a href="deptDetail.html" class="tablelink">查看</a></td>
+			</tr>
+		
+		</tbody>
+    </table>
+    <div class="pagin">
+    	<div class="message">共<i class="blue">2</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+      
+        <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
+	</div>
+    </div>
+	<script type="text/javascript">
+		$('.imgtable tbody tr:odd').addClass('odd');
+	</script>
+    
+</body>
+
+</html>

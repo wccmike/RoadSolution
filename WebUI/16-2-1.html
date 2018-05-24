@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+   
+	$(function(){  
+		var dataTable = $(".tablelist");
+		for(var i=0; i<bfjhs.length; i++){
+			var bfjh= bfjhs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			
+			htmlRow += "<td>" +bfjh.xq + "</td>";
+            htmlRow += "<td>" +bfjh.ghz + "</td>";
+            htmlRow += "<td>" + bfjh.weilan + "</td>";
+			htmlRow += "<td>" + bfjh.sj + "</td>";
+
+            htmlRow += "<td>" +bfjh.dw + "</td>";
+            htmlRow += "<td>" + bfjh.tell + "</td>";
+          
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">精准扶贫</a></li>
+    <li><a href="#">精准扶贫</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    
+    
+    
+	<ul class="seachform">
+	
+    
+	
+	<li><label>&nbsp;</label><a href="16-2-1.html"><input name="" type="button" class="scbtn" value="帮扶计划"/></a></li>
+	<li><label>&nbsp;</label><a href="16-2-2.html"><input name="" type="button" class="scbtn" value="帮扶项目"/></a></li>
+    <li><label>&nbsp;</label><a href="16-2-3.html"><input name="" type="button" class="scbtn" value="帮扶成效"/></a></li>
+	
+    </ul>
+    </div>
+    
+    
+    
+    
+   
+   
+     <table class="tablelist" >
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>项目类别</th>
+        <th>项目名称</th>
+       
+        
+        <th>项目内容</th>
+		<th>计量单位</th>
+         <th>项目规模</th>
+		 <th>计划资金总额</th>
+       
+        
+        </tr>
+		
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+    </div>
+   
+    
+    
+    
+    
+   
+    
+   
+</body>
+
+</html>

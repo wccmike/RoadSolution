@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zn"
+  xml:lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <meta http-equiv="Pragma"
+    content="no-cache" />
+  <meta http-equiv="Cache-Control"
+    content="no-cache" />
+  <meta http-equiv="Expires"
+    content="-1" />
+  <title>Document</title>
+  <link href="assets/css/style.css"
+    rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery.js"></script>
+  <link rel="stylesheet"
+    href="assets/css/zTreeStyle/zTreeStyle.css"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript"
+    src="assets/js/jquery.ztree.core-3.5.js"></script>
+  <script src="assets/js/myfunction.js"
+    charset="utf-8"></script>
+  <script>
+    $(function() {
+      $("#confirm").click(function() {
+        $("table.tablelist").children("tbody").empty();
+        ajaxUrlInputJsonReturnJson(
+          "ActionAboutUser.aspx/QueryPerson",
+          parseFormInput("form1"),
+          function(d) {
+            var arr = new Array("WorkID", "Name",
+              "TypeName", "Road", "Department");
+            var htmtext = renderTbody(d, arr, "a",
+              "gpsdetail.html", null);
+            $("table.tablelist").children("tbody")
+              .append(htmtext);
+          });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">地图管理</a></li>
+      <li><a href="#">GPS定位</a></li>
+    </ul>
+  </div>
+  <div class="mainindex">
+    <div> </div>
+    <div>
+      <ul class="seachform">
+        <form action="#"
+          id="form1">
+          <li><label>姓名</label><input name="Name"
+              type="text"
+              value=""
+              class="scinput" /></li>
+          <li><label>道路</label><input name="Road"
+              type="text"
+              value=""
+              class="scinput" /></li>
+          <li> <label>人员类型</label> <select name="TypeID"
+              id="personType">
+                      <option value="-1">空</option>
+                      <option value="1">指挥中心</option>
+                      <option value="2">路长</option>
+                      <option value="3">信息采集员</option>
+                  </select> </li>
+        </form>
+        <li><label>&nbsp;</label><input id="confirm"
+            type="button"
+            class="scbtn"
+            value="查询" /></li>
+      </ul>
+    </div>
+    <table class="tablelist">
+      <thead>
+        <tr>
+          <th>工号</th>
+          <th>姓名</th>
+          <th>人员类型</th>
+          <th>路名</th>
+          <th>部门</th>
+          <th>详情</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pagin">
+    <div class="message">共<i class="blue">3</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+    <ul class="paginList">
+      <li class="paginItem current"><a href="javascript:;"><span class="pagepre">上页</span></a></li>
+      <li class="paginItem"><a href="javascript:;">1</a></li>
+      <li class="paginItem current "><a href="javascript:;"><span class="pagenxt">下页</span></a></li>
+    </ul>
+  </div>
+  <div class="tip">
+    <div class="tiptop"><span>提示信息</span><a></a></div>
+    <div class="tipinfo"> <span><img src="assets/images/ticon.png" /></span>
+      <div class="tipright">
+        <p>是否确认对信息的修改 ？</p> <cite>如果是请点击确定按钮 ，否则请点取消。</cite> </div>
+    </div>
+    <div class="tipbtn"> <input name=""
+        type="button"
+        class="sure"
+        value="确定" />&nbsp; <input name=""
+        type="button"
+        class="cancel"
+        value="取消" /> </div>
+  </div>
+  </div>
+</body>
+
+</html>

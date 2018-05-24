@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  <script type="text/javascript">
+    KE.show({
+        id : 'content',
+        cssPath : './index.css'
+    });
+  </script>
+   <script type="text/javascript">
+    KE.show({
+        id : 'content1',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">业务学习</a></li>
+     <li><a href="#">管护业务</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">业务修改</a></li> 
+    
+  	</ul>
+    </div> 
+  
+  	<div id="tab1" class="lright" >
+	<ul class="forminfo">
+	<li></li>
+	<li><label>标题<b>*</b></label><input name="" type="text" class="dfinput"  value="护林员的职责" /></li>
+         
+   
+    <li><label>内容<b>*</b></label>
+    <textarea id="content" name="content" style="width:700px;height:250px;visibility:hidden;">
+	       
+		       <p> 一、学习、宣传党和国家有关林业法律、法规，不断提高执行政策能力和管理水平。</p>
+二、制止乱砍滥伐和毁坏林木、非法收购和无证经营加工木材、乱占林地、毁坏开垦、毁坏珍贵树木等破坏森林资源行为。
+三、在森林防火期内，按照上级部门安排，着装上岗认真巡查，制止一切野外非法用火，及时消除火灾隐患；发现火情及时报告，并协助村、乡搞好扑救；火灾扑灭后要积极提供线索，协助有关部门对火灾案件进行查处。
+四、负责巡查并报告管护区内森林病虫发生发展情况和防治工作。
+五、制止乱采滥挖和乱捕滥猎国家和省级重点保护的野生动植物，协助有关部门查处破坏国家和省级重点保护的野生动植物案件。
+六、负责封山育林区域巡查，制止野外放牧。
+七、保护好管护区内各种林业服务标志、标牌、广告等公益性林业标志设施。
+八、要保持通讯畅通，有火情要及时上报村委会、乡政府。
+九、完成乡政府、村委会交办的其他工作。
+		   
+	
+	</textarea>
+    </li>
+
+     <a href="7-2-2.html"><label>&nbsp;</label><input name="" type="button" class="btn" value="提交"/></a>
+    </div>
+    
+    
+    
+    
+    
+    </div>
+
+
+</body>
+
+</html>

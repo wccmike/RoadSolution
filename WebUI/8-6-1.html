@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+
+
+<script language="javascript">
+	var zTree;
+	var demoIframe;
+
+	var setting = {
+		view: {
+			dblClickExpand: false,
+			showLine: true,
+			selectedMulti: false
+		},
+		data: {
+			simpleData: {
+				enable:true,
+				idKey: "id",
+				pIdKey: "pId",
+				rootPId: ""
+			}
+		},
+		callback: {
+			beforeClick: function(treeId, treeNode) {
+				var zTree = $.fn.zTree.getZTreeObj("tree");
+				if (treeNode.isParent) {
+					zTree.expandNode(treeNode);
+					return false;
+				} else {
+					demoIframe.attr("src",treeNode.file + ".html");
+					return true;
+				}
+			}
+		}
+	};
+
+	var zNodes =[
+		
+		{ id:1, pId:0, name:"中国通信服务有限公司", open:true},
+			{ id:11, pId:1, name:"陕西通信信息技术有限公司"},
+			{ id:111, pId:11, name:"工程"},
+			{ id:112, pId:11, name:" 监理"},
+			{ id:113, pId:11, name:"服务"},
+			{ id:114, pId:11, name:"设计"},
+		{ id:12, pId:1, name:"西安机动通信局"},
+			{ id:121, pId:12, name:"工程"},
+			{ id:122, pId:12, name:"监理"},
+			{ id:123, pId:12, name:"服务"},
+			{ id:124, pId:12, name:"设计"},
+		{ id:13, pId:1, name:"陕西公众信息产业有限公司"},
+			{ id:131, pId:13, name:"工程"},
+			{ id:132, pId:13, name:"监理"},
+			{ id:133, pId:13, name:"服务"},
+			{ id:134, pId:13, name:"设计"}
+			
+
+
+		
+	];
+
+	$(document).ready(function(){
+		var t = $("#tree");
+		t = $.fn.zTree.init(t, setting, zNodes);
+		demoIframe = $("#testIframe");
+		demoIframe.bind("load", loadReady);
+		var zTree = $.fn.zTree.getZTreeObj("tree");
+		zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+	});
+
+	
+
+</script>
+<script language="javascript">
+$(function(){	
+	//导航切换
+	$(".imglist li").click(function(){
+		$(".imglist li.selected").removeClass("selected")
+		$(this).addClass("selected");
+	})	
+})	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">系统管理</a></li>
+    <li><a href="#">员工信息</a></li>
+    </ul>
+    </div>
+	<div class="rightinfo">
+    
+    <div >
+    
+    	<ul class="seachform">
+    
+    <li><label>用户查询</label><input name="" type="text" value="请输入用户姓名" class="scinput" /></li>
+   
+    
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+    
+    </ul>
+	  <div class="xline" align="center"></div>
+    <div class="tools">
+    
+    	<ul class="toolbar">
+        <li><a href="8-1add.html"><span><img src="assets/images/t01.png" /></span>添加</a></li>
+        <li ><a href="8-1add.html"><span><img src="assets/images/t02.png" /></span>修改</a></li>
+        <li><span><img src="assets/images/t03.png" /></span>删除</li>
+        </ul>
+      
+    </div>
+	<div class="xline" align="center"></div>
+    
+	<div >
+    
+    <div style="width:23%;float:left" >
+  
+			<ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+	
+    </div>
+    <div style="width:75%;float:left" >
+
+    <table class="imgtable">
+    
+    <thead>
+    <tr>
+ 
+    <th>员工姓名</th>
+        <th>年龄</th>
+		<th>性别</th>
+        <th>登录时间</th>
+        <th>家庭住址</th>
+        <th>操作</th>
+    
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+    <tr>
+  
+     <td>张毅</td>
+        <td>30</td>
+		<td>男</td>
+        <td>2013-09-09 15:05</td>
+        <td>西安市高新路</td>
+        <td><a href="8-1check.html" class="tablelink">查看</a></td>
+    
+    </tr>
+    
+    <tr>
+  
+       <td>瑞康</td>
+        <td>36</td>
+		<td>女</td>
+        <td>2013-09-08 14:02</td>
+        <td>莲湖区未央路</td>
+        <td><a href="8-1check.html" class="tablelink">查看</a></td>
+    
+    </tr>
+    
+    <tr>
+    
+    <td>刘科</td>
+        <td>46</td>
+		<td>男</td>
+        <td>2013-09-07 13:16</td>
+        <td>科技路西口</td>
+        <td><a href="8-1check.html" class="tablelink">查看</a></td>
+    
+    </tr>
+    
+    <tr>
+   
+    <td>王伟</td>
+        <td>34</td>
+		<td>男</td>
+        <td>2013-09-06 10:36</td>
+        <td>北大街</td>
+        <td><a href="8-1check.html" class="tablelink">查看</a></td>
+   
+    </tr>
+    
+    <tr>
+   
+    <td>王维</td>
+        <td>25</td>
+		<td>男</td>
+        <td>2013-09-04 12:00</td>
+        <td>莲湖区红庙坡</td>
+        <td><a href="8-1check.html" class="tablelink">查看</a></td>
+    
+    </tr>
+    
+    </tbody>
+    
+    </table>
+    
+    
+    
+    
+    
+   
+    <div class="pagin">
+    	<div class="message">共<i class="blue">5</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+      
+        <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+	</div>
+    
+    
+    
+    
+    </div>
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+    
+<script type="text/javascript">
+	$('.imgtable tbody tr:odd').addClass('odd');
+	</script>
+    
+</body>
+
+</html>

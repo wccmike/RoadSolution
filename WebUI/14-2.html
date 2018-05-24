@@ -1,0 +1,169 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+   
+	$(function(){  
+		var dataTable = $(".tablelist");
+		for(var i=0; i<rwkhs.length; i++){
+			var rwkh = rwkhs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			htmlRow += "<td>" + rwkh.dq + "</td>";	
+			htmlRow += "<td>" + rwkh.xq + "</td>";
+            htmlRow += "<td>" + rwkh.ghz + "</td>";
+			htmlRow += "<td>" + rwkh.ghpq + "</td>";
+				htmlRow += "<td>" + rwkh.name + "</td>";	
+			htmlRow += "<td>" + rwkh.sj + "</td>";
+            htmlRow += "<td>" + rwkh.cqts + "</td>";
+			htmlRow += "<td>" + rwkh.sbrz + "</td>";
+            	htmlRow += "<td>" + rwkh.lsrw + "</td>";	
+			htmlRow += "<td>" + rwkh.xsgls + "</td>";
+            htmlRow += "<td>" + rwkh.gxts + "</td>";
+			htmlRow += "<td>" + rwkh.qjts + "</td>";
+      	htmlRow += "<td>" + rwkh.xs + "</td>";	
+			htmlRow += "<td>" + rwkh.dk + "</td>";
+            htmlRow += "<td>" + rwkh.cd + "</td>";
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">绩效考核</a></li>
+    <li><a href="#">任务考核</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    <div >
+    
+	<ul class="seachform">
+    <li><label>开始时间</label><input name="" type="text" value="" class="scinput" /></li>
+    <li><label>结束时间</label><input name="" type="text" value="" class="scinput" /></li>
+	<li><label>县区名</label><input name="" type="text" value="" class="scinput" /></li>
+	
+	
+    </ul>
+	  <div class="xline" align="center"></div>
+    </div>
+    <div >
+    
+	<ul class="seachform">
+     <li><label>护林区名</label><input name="" type="text" value="" class="scinput" /></li>
+    <li><label>护林员名</label><input name="" type="text" value="" class="scinput" /></li>
+	<li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+	<li><label>&nbsp;</label><a href="14-2-1.html"><input name="" type="button" class="scbtn" value="EXC导出"/></a></li>
+	<li><label>&nbsp;</label><a href="14-2-2.html"><input name="" type="button" class="scbtn" value="EXC导入"/></a></li>
+    </ul>
+	  <div class="xline" align="center"></div>
+    </div>
+    
+    
+    
+    
+   
+   
+     <table class="tablelist" style="text-align:center;">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>时间</th>
+        <th>县区</th>
+       
+        
+        <th>林区</th>
+        <th>护员名</th>
+         <th >森林火险任务数</th>
+          <th > 完成数</th>
+         <th >盗伐取证任务数</th>
+        <th > 完成数</th>
+       <th > 紧急救援任务数</th>
+       <th > 完成数</th>
+       <th > 森林病害任务数</th>
+       <th>完成数</th>
+        <th>资源调查任务数</th>
+        <th>完成数</th>
+		<th>完成总数</th>
+		
+        
+        
+        
+        
+        </tr>
+		
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+    </div>
+   <div class="pagin">
+    	<div class="message">共<i class="blue">6</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem current"><a href="javascript:;"><span class="pagepre">上页</span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+      
+        <li class="paginItem current "><a href="javascript:;"><span class="pagenxt">下页</span></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+   
+</body>
+
+</html>

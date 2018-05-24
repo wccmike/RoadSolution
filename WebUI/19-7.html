@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+<!--
+	$(function(){
+		// 获取表格对象
+		var dataTable = $(".tablelist");
+		for(var i=0; i<tbxws.length; i++){
+			var tbxw = tbxws[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			htmlRow += "<td>" + tbxw.name + "</td>";	
+			htmlRow += "<td>" + tbxw.publishState + "</td>";
+            htmlRow += "<td>" + tbxw.times + "</td>";
+			htmlRow += "<td>" + tbxw.createTime + "</td>";
+			htmlRow += "<td><a href='19-7-1.html' class='tablelink'>查看</a></td>";
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+ 
+//-->
+</script>
+
+
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+
+    <li><a href="#">林业新闻</a></li>
+    <li><a href="#">天保新闻</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    <div class="welinfo" >
+    <ul>
+    
+    <li><label>标题</label><input name="" type="text"  class="scinput" />
+   
+    
+   <label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+    
+    </ul>
+    </div>
+    
+    <div class="xline" align="center"></div>
+    <div class="tools">
+    
+    	<ul class="toolbar">
+        <li><a href="7-2-2set.html"><span><img src="assets/images/t01.png" /></span>添加</a></li>
+        <li ><a href="7-22-2set.html"><span><img src="assets/images/t02.png" /></span>修改</a></li>
+        <li><span><img src="assets/images/t03.png" /></span>删除</li>
+        </ul>
+        
+        
+      
+    </div>
+    
+    
+     <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+      
+        <th>标题</th>
+        <th>发布状态</th>
+        <th>浏览次数</th>
+        <th>创建时间</th>
+        
+        <th>查看</th>
+        </tr>
+        </thead>
+        <tbody>
+       
+        
+        
+        </tbody>
+    </table>
+   
+    
+   
+</body>
+
+</html>

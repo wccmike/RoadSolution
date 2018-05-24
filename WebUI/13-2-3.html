@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<link rel="stylesheet" href="assets/css/demo.css" type="text/css">
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<!--<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>-->
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  <script type="text/javascript">
+    KE.show({
+        id : 'content',
+        cssPath : './index.css'
+    });
+  </script>
+   <script type="text/javascript">
+    KE.show({
+        id : 'content1',
+        cssPath : './index.css'
+    });
+  </script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+<SCRIPT type="text/javascript">
+		
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+
+		var zNodes =[
+			{ name:"中国电信", open:true,
+				children: [
+					{ name:"陕通信息",
+						children: [
+							{ name:"产品研发部"},
+							{ name:"销售部"},
+							{ name:"后勤部"},
+							{ name:"通信部"}
+						]}
+					
+				]},
+			{ name:"中国电信",
+				children: [
+					{ name:"陕通信息",
+						children: [
+							{ name:"产品研发部"},
+							{ name:"销售部"},
+							{ name:"后勤部"},
+							{ name:"通信部"}
+						]}
+					
+				]}
+			
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		
+	</SCRIPT>
+	<SCRIPT type="text/javascript">
+		
+		var setlist = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+
+		var zTree =[
+			{ name:"社会经济类", open:true,
+				children: [
+					{ name:"社会经济学",
+						children: [
+							{ name:"初级经济学"},
+							{ name:"高级经济学"},
+							{ name:"经济管理学"},
+							
+						]}
+					
+				]},
+			{ name:"企业发展类",
+				children: [
+					{ name:"中型企业",
+						children: [
+							{ name:"企业规划"},
+							{ name:"企业背景"},
+							{ name:"企业文化"},
+							{ name:"企业市场"}
+						]}
+					
+				]}
+			
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#tree"), setlist, zTree);
+		});
+		
+	</SCRIPT>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">业务学习</a></li>
+     <li><a href="#">政策法规</a></li>
+    </ul>
+    </div>
+    <div class="formbody">
+    <div id="usual1" class="usual"> 
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">添加信息</a></li> 
+    </ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    
+   
+    
+    <ul class="forminfo">
+    <li><label>标题<b>*</b></label><input name="" type="text" class="dfinput" value="森林法总则"  style="width:518px;"/></li>
+     
+     <li><label>内容<b>*</b></label>
+    <textarea id="content" name="content" style="width:700px;height:250px;visibility:hidden;">
+	  <p> 第一条</P>
+<p>为了保护、培育和合理利用森林资源，加快国土绿化，发挥森林蓄水保土、调节气候、改善环境和提供林产品的作用，适应社会主义建设和人民生活的需要，特制定本法。</P>
+<p>第二条</P>
+<p>在中华人民共和国领域内从事森林、林木的培育种植、采伐利用和森林、林木、林地的经营管理活动，都必须遵守本法。</P>
+<p>第三条</P>
+<p>森林资源属于国家所有，由法律规定属于集体所有的除外。</P>
+<p>国家所有的和集体所有的森林、林木和林地，个人所有的林木和使用的林地，由县级以上地方人民政府登记造册，发放证书，确认所有权或者使用权。国务院可以授权国务院林业主管部门，对国务院确定的国家所有的重点林区的森林、林木和林地登记造册，发放证书，并通知有关地方人民政府。</P>
+<p>森林、林木、林地的所有者和使用者的合法权益，受法律保护，任何单位和个人不得侵犯。</P>
+<p>第四条</P>
+<p>森林分为以下五类：
+（一）防护林：以防护为主要目的的森林、林木和灌木丛，包括水源涵养林，水土保持林，防风固沙林，农田、牧场防护林，护岸林，护路林；
+（二）用材林：以生产木材为主要目的的森林和林木，包括以生产竹材为主要目的的竹林；
+（三）经济林：以生产果品，食用油料、饮料、调料，工业原料和药材等为主要目的的林木；
+（四）薪炭林：以生产燃料为主要目的的林木；
+（五）特种用途林：以国防、环境保护、科学实验等为主要目的的森林和林木，包括国防林、实验林、母树林、环境保护林、风景林，名胜古迹和革命纪念地的林木，自然保护区的森林。</P>
+<p>第五条</P>
+<p>林业建设实行以营林为基础，普遍护林，大力造林，采育结合，永续利用的方针。</P>
+<p>第六条</P>
+<p>国家鼓励林业科学研究，推广林业先进技术，提高林业科学技术水平。</P>
+<p>第七条</P>
+<p>国家保护林农的合法权益，依法减轻林农的负担，禁止向林农违法收费、罚款，禁止向林农进行摊派和强制集资。
+国家保护承包造林的集体和个人的合法权益，任何单位和个人不得侵犯承包造林的集体和个人依法享有的林木所有权和其他合法权益。</P>
+<p>第八条</P>
+<p>国家对森林资源实行以下保护性措施：
+（一）对森林实行限额采伐，鼓励植树造林、封山育林，扩大森林覆盖面积；
+（二）根据国家和地方人民政府有关规定，对集体和个人造林、育林给予经济扶持或者长期贷款；
+（三）提倡木材综合利用和节约使用木材，鼓励开发、利用木材代用品；
+（四）征收育林费，专门用于造林育林；
+（五）煤炭、造纸等部门，按照煤炭和木浆纸张等产品的产量提取一定数额的资金，专门用于营造坑木、造纸等用材林；
+（六）建立林业基金制度。
+国家设立森林生态效益补偿基金，用于提供生态效益的防护林和特种用途林的森林资源、林木的营造、抚育、保护和管理。森林生态效益补偿基金必须专款专用，不得挪作他用。具体办法由国务院规定。</P>
+     
+	</textarea>
+    </li>
+	
+	
+	<li><a href="13-2.html"><label>&nbsp;</label><input name="" type="button" class="btn" value="提交信息"/></a></li>
+	
+    
+    </div>
+
+
+</body>
+
+</html>

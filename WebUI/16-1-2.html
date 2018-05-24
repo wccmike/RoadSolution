@@ -1,0 +1,141 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+   
+	$(function(){  
+		var dataTable = $(".tablelist");
+		for(var i=0; i<qbs.length; i++){
+			var qb = qbs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			htmlRow += "<td>" + qb.d1 + "</td>";
+            htmlRow += "<td>" + qb.d2 + "</td>";
+            htmlRow += "<td>" + qb.d3+ "</td>";
+			htmlRow += "<td>" + qb.xq + "</td>";
+           
+
+            htmlRow += "<td>" + qb.ghz + "</td>";
+           
+          htmlRow += "<td>" + qb.weilan + "</td>";
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">精准扶贫</a></li>
+    <li><a href="#">贫困户报表</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    
+    <div >
+    
+	<ul class="seachform">
+	
+    
+	<li><label>&nbsp;</label><a href="16-1.html"><input name="" type="button" class="scbtn" value="贫困护员"/></li>
+	<li><label>&nbsp;</label><a href="16-1-2.html"><input name="" type="button" class="scbtn" value="全部户员"/></a></li>
+	<li><label>&nbsp;</label><a href="16-1-3.html"><input name="" type="button" class="scbtn" value="非贫困护员"/></a></li>
+    </ul>
+    </div>
+    
+    
+    
+    
+   
+   
+     <table class="tablelist" >
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+		<th>县区</th>
+        <th>管护站</th>
+        <th>电子围栏</th>
+        <th>护林员名</th>
+        <th>联系电话</th>
+        <th>贫困标准</th>
+	
+        
+        
+        
+        
+        </tr>
+		
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+    </div>
+   <div class="pagin">
+    	<div class="message">共<i class="blue">10000</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem current"><a href="javascript:;"><span class="pagepre">上页</span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+      
+        <li class="paginItem current "><a href="javascript:;"><span class="pagenxt">下页</span></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+   
+</body>
+
+</html>

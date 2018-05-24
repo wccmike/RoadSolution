@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type"
+    content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <link href="assets/css/style.css"
+    rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery.js"></script>
+  <link rel="stylesheet"
+    href="assets/css/zTreeStyle/zTreeStyle.css"
+    type="text/css">
+  <script type="text/javascript"
+    src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript"
+    src="assets/js/jquery.ztree.core-3.5.js"></script>
+  <script src="assets/js/myfunction.js"
+    charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#btns").click(function() {
+        //formPwd // ID
+        var test = ""
+        ajaxUrlInputJsonReturnJson(
+          "ActionAboutUser.asmx/ChangePassword",
+          parseFormInput("formPwd"),
+          function(d) {
+            alert(d);
+          });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">人员管理</a></li>
+      <li><a href="#">修改密码</a></li>
+    </ul>
+  </div>
+  <div class="mainindex">
+    <form action="#"
+      id="formPwd"><label for="">旧密码: </label> <input name="OldPassword"
+        type="text"
+        value=""
+        class="scinput" /></br> <label for="">新密码: </label><input
+      name="Password" type="text"
+        value=""
+        class="scinput" /> </br>
+    </form><input id="btns"
+      type="button"
+      class="scbtn"
+      value="确定" /> </div>
+</body>
+
+</html>

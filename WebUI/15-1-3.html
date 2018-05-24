@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type"
+	  content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible"
+	  content="IE=edge" />
+	<meta name="viewport"
+	  content="initial-scale=1.0, user-scalable=no, width=device-width"
+	/>
+	<meta http-equiv="Pragma"
+	  content="no-cache" />
+	<meta http-equiv="Cache-Control"
+	  content="no-cache" />
+	<meta http-equiv="Expires"
+	  content="-1" />
+	<title>统计报告</title>
+	<link href="assets/css/style.css"
+	  rel="stylesheet"
+	  type="text/css" />
+	<script type="text/javascript"
+	  src="assets/js/jquery.js"></script>
+	<link rel="stylesheet"
+	  href="assets/css/zTreeStyle/zTreeStyle.css"
+	  type="text/css">
+	<script type="text/javascript"
+	  src="assets/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript"
+	  src="assets/js/jquery.ztree.core-3.5.js"></script>
+	<script src="assets/js/myfunction.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(":checkbox").change(function() {
+				$(this).val($(this).is(':checked') ? true : false); //
+				// $(this).attr("value", $(this).attr("checked"));
+			});
+			$("#btnQuery").click(function() {
+				$("#outputResult").empty();
+				ajaxUrlInputJsonReturnJson(
+					"ActionAboutUser.aspx/QueryProblemInRangeStatPage",
+					parseFormInput("formInput"),
+					function(d) {
+						var dd = d;
+						$("#outputResult").html(d.toString());
+					});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="place"> <span>位置：</span>
+		<ul class="placeul">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">统计报告</a></li>
+			<li><a href="#">定期统计</a></li>
+		</ul>
+	</div>
+	<div class="mainindex">
+		<div>
+			<ul class="seachform">
+				<form action="#"
+				  id="formInput">
+					<li><label>开始时间</label><input name="UploadDateBegin"
+						  type="date"
+						  value=""
+						  class="scinput" /></li>
+					<li><label>结束时间</label><input name="UploadDateEnd"
+						  type="date"
+						  value=""
+						  class="scinput" /></li>
+					<li><label>是否已处理</label><input name="IsHandled"
+						  type="checkbox"
+						  value="true"
+						  class="scinput" /></li>
+					<li><label>是否已复查</label><input name="IsReviewed"
+						  type="checkbox"
+						  value="true"
+						  class="scinput" /></li>
+				</form>
+				<li><label>&nbsp;</label><input id="btnQuery"
+					  type="button"
+					  class="scbtn"
+					  value="查询" /></li>
+			</ul>
+			<div class="xline"
+			  align="center"></div>
+		</div>
+		<!-- TODO:  --><label for="">总数： </label>
+		<p id="outputResult"></p>
+	</div>
+</body>
+
+</html>

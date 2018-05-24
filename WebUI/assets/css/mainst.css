@@ -1,0 +1,18 @@
+.fll {
+  float: left;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#parname {
+  font-size: 200%;
+  padding-left: 10px;
+}
+.screendiv {
+  min-width: 300px;
+  max-width: 1330px;
+}
+#rightFrame {
+  float: right;
+}

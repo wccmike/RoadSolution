@@ -1,0 +1,197 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body, html{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	font-family:"Î¢ÈíÑÅºÚ";
+	font-size:14px;
+}
+
+#m-map {
+	width:100%; 
+	height:100%;
+	overflow: hidden;
+}
+
+#result{
+	width:100%;
+}
+
+li{
+	line-height:28px;
+}
+
+.areaList{
+	height: 180px;
+	width: 220px;
+	overflow-y:auto;
+}
+.sel_container{
+	z-index:9999;
+	font-size:12px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:140px;
+	background:rgba(255,255,255,0.8);
+	height:30px;
+	line-height:30px;
+	padding:5px;
+	text-align: center;
+}
+.map_popup {
+	position: absolute;
+	z-index: 200000;
+	width: 220px;
+	height: 180px;
+	right:0px;
+	top:40px;
+}
+.map_popup .popup_main { 
+	background:#fff;
+	border: 1px solid #8BA4D8;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+.map_popup .title {
+	background: url("../images/popup_title.gif") repeat scroll 0 0 transparent;
+	color: #6688CC;
+	font-weight: bold;
+	height: 24px;
+	line-height: 25px;
+	padding-left: 7px;
+}
+.map_popup button {
+	background: url("../images/popup_close.gif") no-repeat scroll 0 0 transparent;
+	cursor: pointer;
+	height: 12px;
+	position: absolute;
+	right: 4px;
+	top: 6px;
+	width: 12px;
+}
+
+.map_popup .popup_content{
+	padding: 10px;
+}
+
+.map_popup .popup_content>div{
+	float: left;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.search_container{
+	z-index:9999;
+	position:absolute;
+	left:235px;
+	top:105px;
+	line-height:30px;
+	padding:5px;
+	background: #fff none repeat scroll 0 0;
+	border: 2px solid #E8F4F4;
+    width: 368px;
+    border-radius: 4px;
+}
+
+.search_container input[type=text]{
+	color: #333;
+	font-size:16px;
+	width: 310px;
+	padding: 6px 10px;
+}
+
+.search_container input[type=button]{
+	background: url('../images/ico06.png') no-repeat;
+    background-size: 23px; 
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+.person-info{
+	padding: 10px;
+	text-align: center;
+}
+
+.person-info .item{
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	float: left;
+}
+
+
+.person-info .item>font{
+	font-weight: bold;
+}
+
+.track_histroy{
+	padding: 0px 10px 10px 10px;
+}
+
+.track_histroy>div{
+	height: 30px;
+	line-height: 30px;
+}
+
+.track_histroy>.title{
+	font-size: 14px;
+	font-weight: bold;
+	color: blue;
+	background-color: #3CC4A9;
+	text-indent: 12px;
+	border-radius: 4px;
+}
+
+.track_histroy .item>div{
+	width: 60px;
+	float: left;
+}
+
+.task_list{
+	padding: 0px 10px 10px 10px;
+}
+
+.task_list>div{
+	height: 30px;
+	line-height: 30px;
+}
+
+.task_list>.title{
+	font-size: 14px;
+	font-weight: bold;
+	color: blue;
+	background-color: #3CC4A9;
+	text-indent: 12px;
+	border-radius: 4px;
+}
+
+.task_list .item>ul>li>.title{
+	float: left;
+	width: 140px;
+}
+
+.task_list .item>ul>li>.state{
+	float: right;
+	width: 40px;
+	color: red;
+}
+
+.task_list .item>ul>li>.done{
+	color: green;
+}
+
+
+.clear{
+	clear:both;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>统计报告</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+		// 获取表格对象
+		var dataTable = $(".tablelist");
+		for(var i=0; i<rwbbs.length; i++){
+			var rwbb = rwbbs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			htmlRow += "<td>" + rwbb.time + "</td>";
+			htmlRow += "<td>" + rwbb.xq + "</td>";
+           
+			htmlRow += "<td>" + rwbb.ghpq + "</td>";
+			htmlRow += "<td>" + rwbb.name + "</td>";	
+			htmlRow += "<td>" + rwbb.sj + "</td>";
+            htmlRow += "<td>" + rwbb.cqts + "</td>";
+			htmlRow += "<td><a href='15-1-3.html' style='color:blue;'>"+ rwbb.sbrz +"</a></td>";
+          
+		
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">统计报告</a></li>
+    <li><a href="#">当日统计</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    <div >
+    
+	
+	  <div class="xline" align="center"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+     <table class="tablelist">
+    	<thead>
+    	<tr>
+        
+          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;部门</th>
+		  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名</th>
+           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上传问题数量</th>
+           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现场处理数量</th>
+           
+     
+        </tr>
+		<tr align="center">
+			<td>XX所</td>
+			<td>张三</td>
+			<td>3</td>
+			<td>3</td>
+			
+		
+        </tr>
+		<tr align="center">
+		 <td>XX所</td>
+		 <td>李四</td>
+		 <td>2</td>
+		 <td>2</td>
+		 
+          
+      </tr>
+	  <tr align="center">
+		 <td>XX所</td>
+		 <td>王五</td>
+		 <td>1</td>
+		 <td>1</td>
+		
+          
+        </tr>
+		
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+    </div>
+   
+    
+   
+</body>
+
+</html>

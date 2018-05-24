@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type"
+	  content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible"
+	  content="IE=edge" />
+	<meta name="viewport"
+	  content="initial-scale=1.0, user-scalable=no, width=device-width"
+	/>
+	<meta http-equiv="Pragma"
+	  content="no-cache" />
+	<meta http-equiv="Cache-Control"
+	  content="no-cache" />
+	<meta http-equiv="Expires"
+	  content="-1" />
+	<title>无标题文档</title>
+	<link href="assets/css/style.css"
+	  rel="stylesheet"
+	  type="text/css" />
+	<script type="text/javascript"
+	  src="assets/js/jquery.js"></script>
+	<link rel="stylesheet"
+	  href="assets/css/zTreeStyle/zTreeStyle.css"
+	  type="text/css">
+	<script type="text/javascript"
+	  src="assets/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript"
+	  src="assets/js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript"
+	  src="assets/js/myfunction.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// $(":checkbox").change(function() {
+			// 	$(this).val($(this).is(':checked') ? true : false); //
+			// 	// $(this).attr("value", $(this).attr("checked"));
+			// });
+			$("#btnQuery").click(function() {
+				$("table.tablelist").children("tbody").empty();
+				ajaxUrlInputJsonReturnJson(
+					"ActionAboutUser.aspx/QueryProblemInProblemQueryPage",
+					parseFormInput("fff"),
+					function(d) {
+						var arr = new Array("Title", "Name", "Road",
+							"BigClass", "SmallClass", "UploadDate");
+						var HTMLText = renderTbody(d, arr, "a",
+							"problemdetail.html", "ProblemID");
+						$("table.tablelist").children("tbody").append(
+							HTMLText);
+					});
+			});
+		});
+		// $(function() {
+		// 	$(":checkbox").change(function() {
+		// 		$(this).val($(this).is(':checked') ? true : false);
+		// 		// $(this).attr("value", $(this).attr("checked"));
+		// 	});
+		// 	$("#btnQuery").click(function() {
+		// 		$("#outputResult").empty();
+		// 		ajaxUrlInputJsonReturnJson(
+		// 			"ActionAboutUser.aspx/QueryProblemInRangeStatPage",
+		// 			parseFormInput("fff"),
+		// 			function(d) {
+		// 				var dd = d;
+		// 				$("#outputResult").html(d.toString());
+		// 			});
+		// 	});
+		// });
+	</script>
+</head>
+
+<body>
+	<form id="fff"
+	  action="#">
+		<div class="place"> <span>位置：</span>
+			<ul class="placeul">
+				<li> <a href="#">首页</a> </li>
+				<li> <a href="#">市政问题管理</a> </li>
+				<li> <a href="#">问题查看</a> </li>
+			</ul>
+		</div>
+		<div class="mainindex">
+			<div>
+				<ul class="seachform">
+					<li> <label>大类</label> <select name="BigClass">
+							<option value="-1">====请选择</option>
+							<option value="市容">市容</option>
+							<option value="B类">B类</option>
+							<option value="C类">C类</option>
+						</select> </li>
+					<li> <label>小类</label> <select name="SmallClass">
+							<option value="-1">====请选择</option>
+							<option value="垃圾">垃圾</option>
+							<option value="井盖">井盖</option>
+							<option value="电话亭">电话亭</option>
+							<option value="卫生">卫生</option>
+						</select> </li>
+					<li> <label>问题标题</label><input name="Title"
+						  type="text"
+						  value=""
+						  class="scinput" /></li>
+					<li> <label>上传年月日</label><input name="UploadDate"
+						  type="date"
+						  value=""
+						  class="scinput" /></li>
+				</ul>
+				<ul class="seachform">
+					<li> <label>属于道路</label><input name="Road"
+						  type="text"
+						  value=""
+						  class="scinput" /></li>
+					<li> <label>是否已处理</label> <input name="IsHandled"
+						  type="checkbox"
+						  value="true"
+						  class="scinput" /> </li>
+					<li> <label>是否已复查</label><input name="IsReviewed"
+						  type="checkbox"
+						  value="true"
+						  class="scinput" /></li>
+				</ul>
+				<ul class="seachform">
+					<li> <label>问题Id</label><input name="ProblemID"
+						  type="text"
+						  value=""
+						  class="scinput problemId" /> </li>
+					<li> <label>&nbsp;</label><input id="btnQuery"
+						  type="button"
+						  class="scbtn"
+						  value="查询" /></li>
+				</ul>
+				<div class="xline"
+				  align="center"></div>
+			</div>
+	</form>
+	<table class="tablelist">
+		<thead>
+			<tr>
+				<th>问题标题</th>
+				<th>上传者</th>
+				<th>属于道路</th>
+				<th>大类</th>
+				<th>小类</th>
+				<th>上传年月日</th>
+				<th> <pre></pre>详情</th>
+			</tr>
+			<!-- <tr align="center">
+					<td>市容</td>
+					<td>井盖</td>
+					<td>地址</td>
+					<td>时间</td>
+					<td>图片</td>
+					<td>图片</td>
+					<td> <a href="problemdetail.html">进入</a> </td>
+				</tr>
+				<tr align="center">
+					<td>市容</td>
+					<td>垃圾</td>
+					<td>地址</td>
+					<td>时间</td>
+					<td>图片</td>
+					<td>图片</td>
+					<td> <a href="problemdetail.html">进入</a> </td>
+				</tr>
+				<tr align="center">
+					<td>市容</td>
+					<td>电话亭</td>
+					<td>地址</td>
+					<td>时间</td>
+					<td>图片</td>
+					<td>图片</td>
+					<td> <a href="problemdetail.html">进入</a> </td>
+				</tr>
+				<tr align="center">
+					<td>市容</td>
+					<td>卫生</td>
+					<td>地址</td>
+					<td>时间</td>
+					<td>图片</td>
+					<td>图片</td>
+					<td> <a href="problemdetail.html">进入</a> </td>
+				</tr> -->
+		</thead>
+		<tbody></tbody>
+	</table>
+	</div>
+	<!-- <form action="#"
+	  id="test"> <input name="IsHandled"
+		  type="checkbox"
+		  value="true"
+		  class="scinput" /> <input name="IsReviewed"
+		  type="checkbox"
+		  value="true"
+		  class="scinput" /> <input type="checkbox"
+		  name="Caonima"
+		  id=""
+		  value="true" /> <input name="Road"
+		  type="text"
+		  value=""
+		  class="scinput" /> <select name="BigClass">
+						<option value="-1">====请选择</option>
+						<option value="市容">市容</option>
+						<option value="B类">B类</option>
+						<option value="C类">C类</option>
+					</select> <input name="UploadDate"
+		  type="date"
+		  value=""
+		  class="scinput" /> </form> -->
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh"
+  xml:lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <meta name="viewport"
+    content="initial-scale=1.0, user-scalable=no, width=device-width"
+  />
+  <meta http-equiv="Pragma"
+    content="no-cache" />
+  <meta http-equiv="Cache-Control"
+    content="no-cache" />
+  <meta http-equiv="Expires"
+    content="-1" />
+  <title>Document</title>
+  <link href="assets/css/style.css"
+    rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery.js"></script>
+  <link rel="stylesheet"
+    href="assets/css/zTreeStyle/zTreeStyle.css"
+    type="text/css">
+  <script type="text/javascript"
+    src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript"
+    src="assets/js/jquery.ztree.core-3.5.js"></script>
+  <script src="assets/js/myfunction.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#query").click(function() {
+        $("table.tablelist").children("tbody").empty();
+        ajaxUrlInputJsonReturnJson(
+          "ActionAboutUser.aspx/QueryProblemInRecheckPage",
+          parseFormInput("formRecheck"),
+          function(d) {
+            console.log(d);
+            var arr = new Array("Title",
+              "AuthorID", "Road", "BigClass",
+              "SmallClass", "UploadDate");
+            var htmlText = renderTbody(d, arr, "a",
+              "recheckupload.aspx", "ProblemID");
+            $("table.tablelist").children("tbody")
+              .append(htmlText);
+          });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="place"> <span>位置：</span>
+    <ul class="placeul">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">上传资料</a></li>
+      <li><a href="#">复查问题</a></li>
+    </ul>
+  </div>
+  <div class="mainindex">
+    <div>
+      <ul class="seachform">
+        <form id="formRecheck">
+          <li><label>大类</label> <select name="BigClass">
+  					<option value="-1">====请选择</option>
+  					<option value="市容">市容</option>
+  					<option value="B类">B类</option>
+  					<option value="C类">C类</option>
+  				</select></li>
+          <li><label>小类</label> <select name="SmallClass">
+  					<option value="-1">====请选择</option>
+  					<option value="垃圾">垃圾</option>
+  					<option value="井盖">井盖</option>
+  					<option value="电话亭">电话亭</option>
+  					<option value="卫生">卫生</option>
+  				</select> </li>
+          <li><label>问题标题</label><input name="Title"
+              type="text"
+              value=""
+              class="scinput" /></li>
+          <li><label>上传年月日</label><input name="UploadDate"
+              type="date"
+              value=""
+              class="scinput" /></li>
+      </ul>
+      <ul class="seachform">
+        <li><label>属于道路</label><input name="Road"
+            type="text"
+            value=""
+            class="scinput" /></li>
+        <li><label>问题Id</label><input name="ProblemID"
+            type="text"
+            value=""
+            class="scinput problemId" /> </li>
+        <li><label>&nbsp;</label><input id="query"
+            type="button"
+            class="scbtn"
+            value="查询" /></li>
+      </ul>
+      </form>
+      <div class="xline"
+        align="center"></div>
+    </div>
+    <table class="tablelist">
+      <thead>
+        <tr>
+          <th>问题标题</th>
+          <th>上传者</th>
+          <th>属于道路</th>
+          <th>大类</th>
+          <th>小类</th>
+          <th>上传年月日</th>
+          <th> <pre></pre>详情</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/dept.js"></script>
+
+<script language="javascript">
+$(function(){
+	Dept.Tree.init($("#tree"));
+})	
+</script>
+
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">系统管理</a></li>
+	<li><a href="#">部门信息</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">添加信息</a></li> 
+    
+  	</ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    <ul class="forminfo">
+    <li><label>上级部门<b>*</b></label>
+		<ul id="tree" class="ztree" style="width:330px; height:200px;border: 1px solid #BFBFBF; overflow:auto;"></ul>
+	</li>
+    <li><label>部门名称<b>*</b></label><input name="" type="text" class="dfinput" value=""  style="width:518px;"/></li>
+    <li><label>部门简介</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
+    <li><a href="dept.html"><label>&nbsp;</label><input name="" type="button" class="btn" value="提交信息"/></a></li>
+    </ul>
+    
+    </div> 
+	</div> 
+    
+    </div>
+
+
+</body>
+
+</html>

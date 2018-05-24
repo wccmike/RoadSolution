@@ -1,0 +1,98 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+		// 获取表格对象
+		var dataTable = $(".tablelist");
+		for(var i=0; i<byxcs.length; i++){
+			var byxc = byxcs[i];
+			var htmlRow = "<tr>";
+			htmlRow += "<td><input  type='checkbox' /></td>";
+			htmlRow += "<td>" + byxc.xianqu + "</td>";	
+			htmlRow += "<td>" + byxc.linqu + "</td>";
+            htmlRow += "<td>" + byxc.name + "</td>";
+			htmlRow += "<td>" + byxc.xinchou + "</td>";
+			
+			htmlRow += "</tr>";
+
+			dataTable.find("tbody").append(htmlRow);
+		}
+	});
+	
+
+</script>
+
+
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">绩效考核</a></li>
+    <li><a href="#">本月薪酬</a></li>
+    </ul>
+    </div>
+    
+    <div class="mainindex">
+    
+    
+    <div >
+    
+	<ul class="seachform">
+    <li><label>日常任务</label><input name="" type="text" value="" class="scinput" /></li>
+	<li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+	<li><label>&nbsp;</label><a href="14-4-2.html"><input name="" type="button" class="scbtn" value="EXC导出"/></a></li>
+	<li><label>&nbsp;</label><a href="14-4-1.html"><input name="" type="button" class="scbtn" value="EXC导入"/></a></li>
+    </ul>
+	  <div class="xline" align="center"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+     <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+         <th>县区名称</th>
+        <th>林区名称</th>
+        <th>护员名称</th>
+        
+        <th>本月薪酬</th>
+       
+        
+        
+        </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+    </div>
+   
+    
+   
+</body>
+
+</html>

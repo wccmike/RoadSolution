@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="assets/css/map.css" type="text/css">
+<link rel="stylesheet" href="assets/js/jquery/jquery-ui-1.11.4.css" type="text/css">
+<script type="text/javascript">
+<!--
+	var m_name = "盗伐取证";
+	var m_icon = "images/df_point.png";
+//-->
+</script>
+<script type="text/javascript" src="assets/js/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="assets/js/jquery/jquery-ui-1.11.4.js"></script>
+<script type="text/javascript" src="assets/js/jquery/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A4749739227af1618f7b0d1b588c0e85"></script>
+<!-- 加载百度地图样式信息窗口 -->
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+<script type="text/javascript" src="assets/js/dept.js"></script>
+<script type="text/javascript" src="assets/js/map2.js"></script>
+</head>
+<body>
+<div class="place">
+	<span>位置：</span>
+	<ul class="placeul">
+		<li><a href="javascript:void(0);">首页</a></li>
+		<li><a href="#">实时监控</a></li>
+		<li><a href="#">盗伐取证</a></li>
+	</ul>
+</div>
+<div class="rightinfo">
+	<table width="100%">
+		<tr>
+			<td width="200" valign="top">
+				<ul id="tree" class="ztree" style="width:200px; overflow:auto;"></ul>
+			</td>
+			<td>
+				<div id="m-map" class="o-map"></div>
+			</td>
+		</tr>
+	</table>
+
+	<div id="dialog-modal" class="m-dialog-modal">
+		<div class="task">
+			<div class="baseinfo">
+				<div class="item title">盗伐取证</div>
+				<div class="item"><span class="title">派单人：</span>何川</div>
+				<div class="item"><span class="title">接单人：</span>张天宇</div>
+				<div class="item"><span class="title">完成状态：</span><font style="color:red;">未完成</font></div>
+				<div class="item"><span class="title">派单时间：</span>2017-04-20 13:32:00</div>
+			</div>
+
+			<div class="remark">
+				<span class="title">描述：</span>
+				<p>盗伐林木罪，是指违反国家保护森林法规，以非法占有为目的，擅自砍伐国家、集体所有或者个人所有的森林或者其他林木，数量较大的行为。本罪侵犯的客体是国家的森林资源保护制度；客观方面表现为违反森林法规，盗伐国家、集体或他人所有的森林或其他林木，数量较大的行为。根据司法解释，所谓数量较大是指：在林区盗伐林木材积2--5立方米或者幼树100—250株：在非林区，盗伐林木材积1—2·5立方米或者幼树50——125株。</p>
+			</div>
+			<div class="photos">
+				<span class="title">图片：</span>
+				<div class="list">
+					<img src="assets/images/df1.jpg">
+					<img src="assets/images/df2.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

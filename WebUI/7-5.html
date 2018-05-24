@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统管理</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+
+
+<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+
+
+<script language="javascript">
+	var zTree;
+	var demoIframe;
+
+	var setting = {
+		view: {
+			dblClickExpand: false,
+			showLine: true,
+			selectedMulti: false
+		},
+		data: {
+			simpleData: {
+				enable:true,
+				idKey: "id",
+				pIdKey: "pId",
+				rootPId: ""
+			}
+		},
+		callback: {
+			beforeClick: function(treeId, treeNode) {
+				var zTree = $.fn.zTree.getZTreeObj("tree");
+				if (treeNode.isParent) {
+					zTree.expandNode(treeNode);
+					return false;
+				} else {
+					demoIframe.attr("src",treeNode.file + ".html");
+					return true;
+				}
+			}
+		}
+	};
+
+	var zNodes =[
+		
+		{ id:1, pId:0, name:"文档类", open:true},
+			{ id:11, pId:1, name:"财务分类"},
+			{ id:111, pId:11, name:"财务技术"},
+			{ id:112, pId:11, name:" 财务计算"},
+			{ id:113, pId:11, name:"财务审核"},
+			{ id:114, pId:11, name:"财务设计"}
+			
+
+
+		
+	];
+
+	$(document).ready(function(){
+		var t = $("#tree");
+		t = $.fn.zTree.init(t, setting, zNodes);
+		demoIframe = $("#testIframe");
+		demoIframe.bind("load", loadReady);
+		var zTree = $.fn.zTree.getZTreeObj("tree");
+		zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+	});
+
+	
+
+</script>
+<script language="javascript">
+$(function(){	
+	//导航切换
+	$(".imglist li").click(function(){
+		$(".imglist li.selected").removeClass("selected")
+		$(this).addClass("selected");
+	})	
+})	
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">考试培训</a></li>
+    
+    </ul>
+    </div>
+	<div class="rightinfo">
+    
+    <div >
+    
+    	<ul class="seachform">
+    
+    <li><label>标题查询</label><input name="" type="text" value="" class="scinput" /></li>
+   
+    
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>
+    
+    </ul>
+	 
+	<div class="xline" align="center"></div>
+	 <div class="tools">
+    
+    	<ul class="toolbar">
+        <li><a href="7-5add.html"><span><img src="assets/images/t01.png" /></span>添加</a></li>
+        <li ><a href="7-5add.html"><span><img src="assets/images/t02.png" /></span>修改</a></li>
+        <li><span><img src="assets/images/t03.png" /></span>删除</li>
+        </ul>
+    </div>
+	<div class="xline" align="center"></div>
+    
+	<div >
+    
+    <div style="width:23%;float:left" >
+  
+			<ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+	
+    </div>
+    <div style="width:75%;float:left" >
+
+    <table class="tablelist">
+    
+    <thead>
+		<tr>
+			<th><input name="" type="checkbox" value="" checked="checked"/></th>
+			<th>标题</th>
+			
+			<th>上传人</th>
+			<th>上传时间</th>
+			
+		</tr>
+    </thead>
+    <tbody>
+		<tr>
+			<td><input name="" type="checkbox" value="" /></td>
+			<td>财务报表考试</td>
+			
+			<td>admin</td>
+			<td>2014-09-30</td>
+			 
+		</tr>
+    
+    <tr>
+	<td><input name="" type="checkbox" value="" /></td>
+   <td>财务诸专业知识考试</td>
+			
+			<td>admin</td>
+			<td>2014-09-30</td>
+			 
+    </tr>
+    
+    <tr>
+	<td><input name="" type="checkbox" value="" /></td>
+    <td>IT专业知识考试</td>
+			
+			<td>admin</td>
+						<td>2014-09-30</td>
+			 
+    </tr>
+    
+    <tr>
+	<td><input name="" type="checkbox" value="" /></td>
+   <td>现代化信息考试</td>
+			
+			<td>admin</td>
+			<td>2014-09-30</td>
+			 
+    </tr>
+    
+    <tr>
+	<td><input name="" type="checkbox" value="" /></td>
+    <td>智能化办公考试</td>
+			
+			<td>admin</td>
+			<td>2014-09-30</td>
+			  
+    </tr>
+    
+    </tbody>
+    
+    </table>
+    
+    
+    
+    
+    
+   
+    <div class="pagin">
+    	<div class="message">共<i class="blue">5</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+      
+        <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+	</div>
+    
+    
+    
+    
+    </div>
+    
+    <div class="tip">
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
+        
+      <div class="tipinfo">
+        <span><img src="assets/images/ticon.png" /></span>
+        <div class="tipright">
+        <p>是否确认对信息的修改 ？</p>
+        <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+        </div>
+        
+        <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+        </div>
+    
+    </div>
+    
+<script type="text/javascript">
+	$('.imgtable tbody tr:odd').addClass('odd');
+	</script>
+    
+</body>
+
+</html>

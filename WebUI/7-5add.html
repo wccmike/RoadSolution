@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">培训管理</a></li>
+    <li><a href="#">考试培训</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">发布知识</a></li> 
+   
+  	</ul>
+    </div> 
+    
+  	<div id="tab1" class="tabson">
+    
+    <div class="formtext">Hi，<b>admin</b>，欢迎您使用知识库发布功能！</div>
+    
+    <ul class="forminfo">
+    <li><label>标题<b>*</b></label><input name="" type="text" class="dfinput" value="请填写标题"  style="width:518px;"/></li>
+    
+    <li><label>培训资料分类<b>*</b></label>  
+    
+
+    <div class="vocation">
+    <select class="select1">
+    <option>电信基础规范</option>
+    <option>电信业务</option>
+    <option>软硬件</option>
+    <option>数据库</option>
+    <option>通信类</option>
+   
+    <option>其他</option>
+    </select>
+    </div>
+    
+    </li>
+    
+  
+ 
+   <li><label>简介</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
+    
+       
+
+   <li><label>上传附件<b>*</b></label> <input type="file" class="dfinput"  name="..." style="width:518px;" input enctype="multipart/form-data" ></li>
+
+    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="马上发布"/></li>
+    </ul>
+    
+    </div> 
+    
+    
+  	
+       
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    
+    
+    
+    
+    </div>
+
+
+</body>
+
+</html>

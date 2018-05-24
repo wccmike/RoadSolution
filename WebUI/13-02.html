@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type"
+	  content="text/html; charset=utf-8" />
+	<title>考勤管理</title>
+	<link href="assets/css/style.css"
+	  rel="stylesheet"
+	  type="text/css" />
+	<script type="text/javascript"
+	  src="assets/js/jquery.js"></script>
+	<script src="assets/js/myfunction.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#btnQu").click(function() {
+				$("table.tablelist").children("tbody").empty();
+				ajaxUrlInputJsonReturnJson(
+					"ActionAboutAttendance.aspx/QueryAttendanceInAttendancePage",
+					parseFormInput("formIn"),
+					function(d) {
+						var arr = new Array("Department", "Name", "Time",
+							"Lat", "Lng");
+						var htmltext = renderTbody(d, arr, "img", null,
+							"Photo");
+						$("table.tablelist").children("tbody").append(
+							htmltext);
+					});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<form id="formIn">
+		<div class="place"> <span>位置：</span>
+			<ul class="placeul">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">考勤管理</a></li>
+				<li><a href="#">打卡查询</a></li>
+			</ul>
+		</div>
+		<div class="rightinfo">
+			<div>
+				<ul class="seachform">
+					<li><label>人名</label><input name="Name"
+						  type="text"
+						  value=""
+						  class="scinput" /></li>
+					<li><label>部门</label><input name="Department"
+						  type="text"
+						  value=""
+						  class="scinput" /></li>
+				</ul>
+				<ul class="seachform">
+					<li><label>开始时间</label><input name="DateBegin"
+						  type="date"
+						  value=""
+						  class="scinput" /></li>
+					<li><label>结束时间</label><input name="DateEnd"
+						  type="date"
+						  value=""
+						  class="scinput" /></li>
+					<li><label>&nbsp;</label><input id="btnQu"
+						  type="button"
+						  class="scbtn"
+						  value="查询" /></li>
+				</ul>
+			</div>
+			<table class="tablelist">
+				<thead>
+					<tr align="left">
+						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;部门</th>
+						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名</th>
+						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打卡时间</th>
+						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打卡经度</th>
+						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打卡纬度</th>
+						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;照片</th>
+					</tr>
+					<!-- <tr align="center">
+					<td>XX所</td>
+					<td>张某</td>
+					<td>2017-07-05 08：25：30</td>
+					<td>西一路</td>
+					<td>通过</td>
+					<td><a href="#">图片</a></td>
+				</tr>
+				<tr align="center">
+					<td>XX所</td>
+					<td>张三</td>
+					<td>2017-07-05 08：25：30</td>
+					<td>解放路</td>
+					<td>通过</td>
+					<td><a href="#">图片</a></td>
+				</tr> -->
+				</thead>
+				<tbody> </tbody>
+			</table>
+			<div class="pagin">
+				<div class="message">共<i class="blue">5</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
+				<ul class="paginList">
+					<li class="paginItem current"><a href="javascript:;"><span class="pagepre">上页</span></a></li>
+					<li class="paginItem"><a href="javascript:;">1</a></li>
+					<li class="paginItem current "><a href="javascript:;"><span class="pagenxt">下页</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

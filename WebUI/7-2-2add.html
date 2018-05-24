@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="assets/js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<link rel="stylesheet" href="assets/css/demo.css" type="text/css">
+<link rel="stylesheet" href="assets/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<!--<script type="text/javascript" src="assets/js/jquery-1.4.4.min.js"></script>-->
+<script type="text/javascript" src="assets/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  <script type="text/javascript">
+    KE.show({
+        id : 'content',
+        cssPath : './index.css'
+    });
+  </script>
+   <script type="text/javascript">
+    KE.show({
+        id : 'content1',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+<SCRIPT type="text/javascript">
+		
+		var setlist = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+
+		var zTree =[
+			{ name:"社会经济类", open:true,
+				children: [
+					{ name:"社会经济学",
+						children: [
+							{ name:"初级经济学"},
+							{ name:"高级经济学"},
+							{ name:"经济管理学"},
+							
+						]}
+					
+				]},
+			{ name:"企业发展类",
+				children: [
+					{ name:"中型企业",
+						children: [
+							{ name:"企业规划"},
+							{ name:"企业背景"},
+							{ name:"企业文化"},
+							{ name:"企业市场"}
+						]}
+					
+				]}
+			
+
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#tree"), setlist, zTree);
+		});
+		
+	</SCRIPT>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">考试题库</a></li>
+     <li><a href="#">题库添加</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">手动添加</a></li> 
+    <li><a href="#tab2" >从题库添加</a></li> 
+    
+  	</ul>
+    </div> 
+  
+  	<div id="tab1" class="tabson" >
+	<ul class="forminfo">
+	<li></li>
+	<li><label>考试名称<b>*</b></label><input name="" type="text" class="dfinput"  /></li>
+	<li><label>考试题型<b>*</b></label>  
+    <div class="vocation">
+    <select class="select1">
+     <option>单选</option>
+	 <option>多选</option>
+    <option>填空题</option>
+    <option>简答题</option>
+    </select>
+    </div>
+    </li>
+     </li>
+
+    <li><label>试题内容<b>*</b></label>
+    <textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+    </li>
+
+	<li><label>考题答案</label></li>
+	<li><label>A<b>*</b></label><input name="" type="text" class="dfinput"  style="width:210px;" />&nbsp;&nbsp;&nbsp;&nbsp;B<b>*</b><input name="" type="text" class="dfinput"  style="width:210px;" /></li>
+	<li><label>C<b>*</b></label><input name="" type="text" class="dfinput"   style="width:210px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#"><input name="" type="button" class="btn" value="添加答案"/></a></li>
+	<li><label>正确答案<b>*</b></label><input name="" type="text" class="dfinput"  style="width:210px;" /></li>
+	<li style="margin-left:80px;"><a href="#"><input name="" type="button" class="btn" value="添加题型"/></a></li>
+	<div class="xline" align="center"></div>
+	<ul class="forminfo">
+	<li></li>
+	<li><label>考试名称<b>*</b></label><input name="" type="text" class="dfinput"  /></li>
+	<li><label>考试题型<b>*</b></label>  
+    <div class="vocation">
+    <select class="select1">
+     <option>单选</option>
+	 <option>多选</option>
+    <option>填空题</option>
+    <option>简答题</option>
+    </select>
+    </div>
+    </li>
+     </li>
+
+    <li><label>试题内容<b>*</b></label>
+    <textarea id="content1" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+    </li>
+
+	<li><label>考题答案</label></li>
+	<li><label>A<b>*</b></label><input name="" type="text" class="dfinput"  style="width:210px;" />&nbsp;&nbsp;&nbsp;&nbsp;B<b>*</b><input name="" type="text" class="dfinput"  style="width:210px;" /></li>
+	<li><label>C<b>*</b></label><input name="" type="text" class="dfinput"   style="width:210px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#"><input name="" type="button" class="btn" value="添加答案"/></a></li>
+	<li><label>正确答案<b>*</b></label><input name="" type="text" class="dfinput"  style="width:210px;" /></li>
+	<li style="margin-left:80px;"><a href="#"><input name="" type="button" class="btn" value="添加题型"/></a></li>
+	<div class="xline" align="center"></div>
+	<ul class="forminfo">
+	<li></li>
+	<li><label>考试名称<b>*</b></label><input name="" type="text" class="dfinput"  /></li>
+	<li><label>考试题型<b>*</b></label>  
+    <div class="vocation">
+    <select class="select1">
+     <option>单选</option>
+	 <option>多选</option>
+    <option>填空题</option>
+    <option>简答题</option>
+    </select>
+    </div>
+    </li>
+     </li>
+
+    <li><label>试题内容<b>*</b></label>
+    <textarea id="content" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+    </li>
+
+	<li><label>考题答案</label></li>
+	<li><label>A<b>*</b></label><input name="" type="text" class="dfinput"  style="width:210px;" />&nbsp;&nbsp;&nbsp;&nbsp;B<b>*</b><input name="" type="text" class="dfinput"  style="width:210px;" /></li>
+	<li><label>C<b>*</b></label><input name="" type="text" class="dfinput"   style="width:210px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#"><input name="" type="button" class="btn" value="添加答案"/></a></li>
+	<li><label>正确答案<b>*</b></label><input name="" type="text" class="dfinput"  style="width:210px;" /></li>
+	<li style="margin-left:80px;"><a href="#"><input name="" type="button" class="btn" value="添加题型"/></a></li>
+	<div class="xline" align="center"></div>
+	</ul>
+	
+    </div>
+    <div id="tab2" class="tabson" >
+	<ul class="forminfo">
+	<li></li>
+	<li>单选题数&nbsp;&nbsp;<input name="" type="text" class="dfinput" style="width: 180px"/>&nbsp;&nbsp;&nbsp;&nbsp;多选题数&nbsp;&nbsp;<input name="" type="text" class="dfinput" style="width: 180px"/>&nbsp;&nbsp;&nbsp;&nbsp;填空题数&nbsp;&nbsp;<input name="" type="text" class="dfinput" style="width: 180px"/>&nbsp;&nbsp;&nbsp;&nbsp;简答题数&nbsp;&nbsp;<input name="" type="text" class="dfinput" style="width: 180px"/></li>
+	<li><cite>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="1" type="radio" value="" checked="checked" />自动生成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="1" type="radio" value="" />手动生成</cite></li>
+	 
+	<li><label>考试题型<b>*</b></label>
+	<div>
+	<ul id="tree" class="ztree" style="width:16%;float:left"></ul>
+	<ul  style="width:55%;float:left">
+	<li></li>
+	<table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+      
+        <th>试题名称</th>
+        <th>创建日期</th>
+        <th>创建人</th>
+        <th>试题浏览</th>
+        <th>正确答案</th>
+        <th>试题分类</th>
+        
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+       
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+        <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        
+        </tr> 
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+   
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+     
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+    
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+      
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        </tr>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+     
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+     
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+   
+        
+        <td>中国电信业务产品介绍</td>
+        <td>2014-9-25</td>
+        <td>袁泽强</td>
+         <td><a href="7-2-2see.html">浏览</a></td>
+         <td><a href="7-2-2check.html">查看</a></td>
+        <td>通讯信息</td>
+        </tr>        
+        </tbody>
+    </table></ul>
+    </div>
+	</li>
+	 <li><a href="#"><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><label>&nbsp;</label><input name="" type="button" class="btn" value="确定"/></a></li>
+	</ul>
+    </div>
+       
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    
+    
+    
+    
+    </div>
+
+
+</body>
+
+</html>

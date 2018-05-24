@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh"
+  xml:lang="zh">
+
+<head>
+  <meta http-equiv="Content-Type"
+    content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible"
+    content="IE=edge" />
+  <meta name="viewport"
+    content="initial-scale=1.0, user-scalable=no, width=device-width"
+  />
+  <meta http-equiv="Pragma"
+    content="no-cache" />
+  <meta http-equiv="Cache-Control"
+    content="no-cache" />
+  <meta http-equiv="Expires"
+    content="-1" />
+  <link href="assets/css/common.css"
+    rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript"
+    src="assets/js/jquery.js"></script>
+  <script src="assets/js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript"
+    src="assets/js/jquery.ztree.core-3.5.js"></script>
+  <script src="assets/js/myfunction.js"></script>
+  <script>
+    $(function() {
+      $("#btnUpdate").click(function() {
+        ajaxUrlInputJsonReturnJson(
+          "ActionAboutUser.aspx/RegisterUser",
+          parseFormInput("f"),
+          function() {
+            console.log("s");
+          });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <form id="f">
+    <div id="man_zone"
+      style="margin-top:0px; padding-top:0px;">
+      <table class="ContentTable">
+        <tr style="background-image:url('./images/tab_05.gif'); background-repeat:repeat-x">
+          <td style="font-size: 12px; margin-left: 40px; height: 30px; line-height: 30px;">
+          <img src="./Images/tb.gif"
+              style="vertical-align:middle;" />当前位置：注册 </td>
+        </tr>
+      </table>
+      <table width="99%"
+        border="0"
+        align="center"
+        cellpadding="3"
+        cellspacing="1">
+        <tr>
+          <td width="18%"
+            class="left_title_1"
+            style=" text-align :right ;   ">用户名
+            <font color="red">*</font>
+          </td>
+          <td width="82%"> <input name="Username"
+              type="text"
+              id="txtName"
+              class="InputField"
+              style="width:300px;" /></td>
+        </tr>
+        <tr>
+          <td width="18%"
+            class="left_title_2"
+            style=" text-align :right ;">姓&nbsp;&nbsp; 名：</td>
+          <td width="82%"> <input name=""
+              type="text"
+              id="txtName0"
+              class="InputField"
+              style="width:300px;" /></td>
+        </tr>
+        <tr>
+          <td width="18%"
+            class="left_title_1"
+            style=" text-align :right ;">密码</td>
+          <td width="82%"> <input name="Password"
+              type="text"
+              id="txtName1"
+              class="InputField"
+              style="width:300px;" /></td>
+        </tr>
+        <tr>
+          <td width="18%"
+            class="left_title_2"
+            style=" text-align :right ;">再次密码</td>
+          <td width="82%"> <input name=""
+              type="text"
+              id="TextBox7"
+              class="InputField"
+              style="width:300px;" /></td>
+        </tr>
+        <tr>
+          <td width="18%"
+            class="left_title_1"
+            style="text-align :right ;">电话</td>
+          <td width="82%"> <input name=""
+              type="text"
+              id="txtName2"
+              class="InputField"
+              style="width:300px;" /></td>
+        </tr>
+        <tr>
+          <td width="18%"
+            class="left_title_2"
+            style="text-align :right ;">帐户类型</td>
+          <td width="82%"> <select name="TypeID"
+              id="DropdownList1"
+              class="InputField"
+              style="width:300px;">
+	<option value="1">指挥中心</option>
+	<option value="2">路长</option>
+	<option value="3">信息采集员</option>
+
+</select> </td>
+        </tr>
+        <tr>
+          <td align="center"
+            colspan="2"> <input type="button"
+              name=""
+              value="提 交"
+              id="btnUpdate"
+              class="ImgButton" /> <input type="button"
+              name=""
+              value="取 消"
+              id="btnCancel"
+              class="ImgButton" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</body>
+
+</html>
