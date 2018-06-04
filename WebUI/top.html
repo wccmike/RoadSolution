@@ -24,7 +24,7 @@
     href="assets/css/mybootstrap.css">
   <script language="JavaScript"
     src="assets/js/jquery.js"></script>
-  <script src="assets/js/jquerysession.js"></script>
+  <script src="assets/js/jquery/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
   <script type="text/javascript">
     $(function() {
       //顶部导航切换
@@ -52,6 +52,17 @@
             $(this).next('ul').slideDown();
           }
         });
+      }
+      if ($.cookie('userJSON') != 'null') {
+        var jobj = JSON.parse($.cookie('userJSON'));
+        $("#cookieUname").html(jobj.Username);
+        $("#quita").click(function() {
+          $.cookie('userJSON', null);
+        });
+        //若无COOKIE，删除欢迎信息
+      } else {
+        $("#quita").empty();
+        $("#username").html("没登录");
       }
     });
   </script>
@@ -94,8 +105,11 @@
             </a> </li>
   </ul>
   <lable class="usernametext"
-    id="username">欢迎你， </lable> <input type="text"
-    value="<%= Session['user'] %>" /> </body>
+    id="username">欢迎你， </lable> <label class="usernametext"
+    id="cookieUname"></label> <a class="usernametext"
+    href="Login.aspx"
+    target="_parent"
+    id="quita"> 退出</a> </body>
 
 </html>
 <script>

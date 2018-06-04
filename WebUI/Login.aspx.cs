@@ -54,7 +54,11 @@ namespace WebUI
             System.Web.Script.Serialization.JavaScriptSerializer jss = new 
                 System.Web.Script.Serialization.JavaScriptSerializer();
             string ujson = jss.Serialize(u);//JavaScriptSerializer的序列化函数
-            Session["userJSON"] = ujson;
+            //Session["userJSON"] = ujson;
+            HttpCookie cookie = new HttpCookie("userJSON");
+            cookie.Value = ujson;
+            cookie.Expires = DateTime.Now.AddHours(8.0);
+            Response.AppendCookie(cookie);
             //string url = "";
             //RoadSolution.DBUtils.PostParseJsonUtil.HttpPost(url, ujson);
             Response.Redirect("~/main.html");
