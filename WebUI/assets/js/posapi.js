@@ -1,5 +1,4 @@
 /*global $, jQuery,AMap,window,console*/
-
 var jsonc = "";
 
 function dataIn(dd) {
@@ -45,6 +44,8 @@ function onComplete(data) {
 function onError() {
     "use strict";
     console.log("position failed");
+
     window.document.getElementById(jsonc).innerHTML = "position failed";
     // location.href="about:blank";
+
 }

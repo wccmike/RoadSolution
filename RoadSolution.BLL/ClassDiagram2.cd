@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RoadSolution.BLL.Attendance">
+    <Position X="8.25" Y="0.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACAAAAAAAAAAEAAAAEAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>Attendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadSolution.BLL.LeaderShip" Collapsed="true">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>LeaderShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadSolution.BLL.PersonPosition">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>PersonPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadSolution.BLL.Problem" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACgAAAAAAAAAAAAAAEAAAAAAAAAAAEAAgY=</HashCode>
+      <FileName>Problem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadSolution.BLL.User" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACAAAAAAAAAAAAAAAEAAAQAAAAQAAEAAQI=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadSolution.BLL.Userinfo" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>Userinfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoadSolution.BLL.Usertype" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYggAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>Usertype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

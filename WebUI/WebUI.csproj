@@ -304,6 +304,7 @@
     <Content Include="xucha.html" />
     <Content Include="xunchaAdd.html" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram3.cd" />
     <None Include="Properties\PublishProfiles\IISConfig.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
